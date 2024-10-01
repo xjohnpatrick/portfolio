@@ -35,20 +35,35 @@ export const flipWords = [
   "and learning from others."
 ];
 
+export const technologies = [
+  "Next.js", 
+  "JavaScript", 
+  "TypeScript", 
+  "Tailwind CSS"
+];
+
+export const uiComponents = [
+  "Next UI", 
+  "Aceternity UI", 
+];
+
 export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
-    alt: "github icon"
+    alt: "github icon",
+    link: "https://github.com/xjohnpatrick"
   },
   {
     id: 2,
-    img: "/twit.svg",
-    alt: "twitter icon"
+    img: "/fb.svg",
+    alt: "facebook icon",
+    link: "https://www.facebook.com/JpIsidoro15/"
   },
   {
     id: 3,
     img: "/link.svg",
-    alt: "linkedin icon"
+    alt: "linkedin icon",
+    link: "https://www.linkedin.com/in/jpisidoro15/"
   },
 ];
