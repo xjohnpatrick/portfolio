@@ -3,6 +3,11 @@ import { TypewriterEffect } from './ui/typewriter-effect'
 import { words } from '@/data'
 import { BodyTabs } from './BodyTabs'
 
+import {Tabs, Tab} from "@nextui-org/tabs";
+import {Card, CardBody} from "@nextui-org/card";
+import Rating from '@mui/material/Rating';
+import { TbStarsFilled } from "react-icons/tb";
+
 const Hero = () => {
   
   return (

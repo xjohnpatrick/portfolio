@@ -12,7 +12,7 @@ export function BodyTabs() {
       title:  "About",
       value: "about me page",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige/90 to-sage">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige to-sage">
           <p className="text-sage">About Me</p>
           <AboutMe />
         </div>
@@ -22,7 +22,7 @@ export function BodyTabs() {
       title: "Projects",
       value: "projects page",
       content: (
-        <div className="w-full overflow-y-scroll scrollbar-hide relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige/90 to-sage">
+        <div className="w-full overflow-y-scroll scrollbar-hide relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige to-sage">
           <p className="text-sage">Projects</p>
           <Projects />     
         </div>
@@ -32,7 +32,7 @@ export function BodyTabs() {
       title: "Experience",
       value: "experience page",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige/90 to-sage">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige to-sage">
           <p className="text-sage">Experience</p>
           <Experience />
         </div>

@@ -60,6 +60,14 @@ export const projectsData2024 = [
   {
     id: 1,
     img: "",
+    alt: "My Portfolio",
+    link: "",
+    description: "John Patrick's Portfolio",
+    title: "My Portfolio"
+  },
+  {
+    id: 2,
+    img: "",
     alt: "TodoList Image",
     link: "",
     description: "Task Management System",
