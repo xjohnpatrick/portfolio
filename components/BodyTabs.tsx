@@ -9,7 +9,7 @@ import Link from "next/link";
 export function BodyTabs() {
   const tabs = [
     {
-      title:  "About",
+      title: "About",
       value: "about me page",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige to-sage">
@@ -24,7 +24,7 @@ export function BodyTabs() {
       content: (
         <div className="w-full overflow-y-scroll scrollbar-hide relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold bg-gradient-to-br from-beige to-sage">
           <p className="text-sage">Projects</p>
-          <Projects />     
+          <Projects />
         </div>
       ),
     },
@@ -41,7 +41,7 @@ export function BodyTabs() {
     {
       title: <Link href="#contact">Contact</Link>,
       value: "contact page",
-    }
+    },
   ];
 
   return (
