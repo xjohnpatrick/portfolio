@@ -17,7 +17,7 @@ const Hero = () => {
           </p>
           <TypewriterEffect
             words={words}
-            className="w-full md:w-[800px] mt-10 p-2"
+            className="w-full md:w-[800px] p-2"
           />
           <p className="text-center md:tracking-wider my-8 text-lg lg:text-2xl text-beige/80">
             Hi, I'm <span className="text-sage">John Patrick</span>, a

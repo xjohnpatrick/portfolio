@@ -1,10 +1,4 @@
 "use client";
-import {
-  useMotionValueEvent,
-  useScroll,
-  useTransform,
-  motion,
-} from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -24,14 +18,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     }
   }, [ref]);
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start 10%", "end 50%"],
-  });
-
-  const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
-  const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
-
   return (
     <div
       className="w-full dark:bg-neutral-950 font-sans md:px-10"
@@ -42,8 +28,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           Changelog from my journey
         </h2>
         <p className="text-black/80 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Next.js for the past year. Here&apos;s
-          a timeline of my journey.
+          I&apos;ve been working on Next.js for the past year. Here&apos;s a
+          timeline of my journey.
         </p>
       </div>
 
@@ -76,13 +62,6 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
           }}
           className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-sage dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] "
         >
-          <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-beige via-beige to-transparent from-[0%] via-[10%] rounded-full z-50"
-          />
         </div>
       </div>
     </div>

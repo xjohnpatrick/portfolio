@@ -86,6 +86,27 @@ export const projectsData2023 = [
   },
 ];
 
+export const experience = [
+  {
+    id: 0,
+    description: "Front-End Developer",
+    img: "",
+    alt: "",
+  },
+  {
+    id: 1,
+    description: "IT/Tech Support",
+    img: "",
+    alt: "",
+  },
+  {
+    id: 2,
+    description: "Front-End Developer",
+    img: "",
+    alt: "",
+  },
+];
+
 // export const projectsData2021 = [
 //   {
 //     id: 0,

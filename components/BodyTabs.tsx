@@ -5,6 +5,7 @@ import { AboutMe } from "./AboutMe";
 import { Projects } from "./Projects";
 import { Experience } from "./Experience";
 import Link from "next/link";
+import { BsEnvelopeArrowDownFill } from "react-icons/bs";
 
 export function BodyTabs() {
   const tabs = [
@@ -38,14 +39,15 @@ export function BodyTabs() {
         </div>
       ),
     },
-    {
-      title: <Link href="#contact">Contact</Link>,
-      value: "contact page",
-    },
   ];
 
   return (
     <div className="h-[30rem] md:h-[50rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mt-10">
+      <Link href="#contact">
+        <button className="absolute top-1 right-5 text-sage flex items-center gap-2 hover:bg-black z-50 rounded-full py-2 px-4 hover:-translate-y-1 transform transition duration-200 hover:shadow-md">
+          Email Me <BsEnvelopeArrowDownFill />
+        </button>
+      </Link>
       <Tabs tabs={tabs} />
     </div>
   );
