@@ -60,14 +60,14 @@ export const projectsData2024 = [
   {
     id: 0,
     img: "",
-    alt: "My Portfolio",
+    alt: "John Patrick's Portfolio Image",
     link: "",
     description: "John Patrick's Portfolio",
     title: "My Portfolio",
   },
   {
     id: 1,
-    img: "",
+    img: "/todoListApp.jpg",
     alt: "TodoList Image",
     link: "",
     description: "Task Management System",
@@ -78,7 +78,7 @@ export const projectsData2024 = [
 export const projectsData2023 = [
   {
     id: 0,
-    img: "",
+    img: "/cmemboApp.png",
     alt: "Barangay Comembo Image",
     link: "",
     description: "Document Management System",
@@ -96,12 +96,6 @@ export const experience = [
   {
     id: 1,
     description: "IT/Tech Support",
-    img: "",
-    alt: "",
-  },
-  {
-    id: 2,
-    description: "Front-End Developer",
     img: "",
     alt: "",
   },

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Image from "next/image";
+import myPicture from "../public/me.jpg";
 
-import { Tooltip } from "@nextui-org/tooltip";
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Card, CardBody } from "@nextui-org/card";
 import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/popover";
@@ -33,60 +34,60 @@ export function AboutMe() {
 
   return (
     <div className="flex flex-col h-full w-full mt-10">
-      <div className="flex items-center">
+      <div className="flex flex-col lg:flex-row items-center">
         <div className="flex m-4">
-          <Tooltip content="John Patrick Culi Isidoro" placement="bottom">
-            <img
-              src="/me.jpg"
-              alt="John Patrick's Toga Picture"
-              className="flex w-48 h-56 rounded-full mb-4"
-            />
-          </Tooltip>
+          <Image
+            src={myPicture}
+            alt="John Patrick's Toga Picture"
+            width={192}
+            height={224}
+            className="flex rounded-full mb-4"
+          />
         </div>
-        <div className="text-2xl mx-auto font-normal text-black/80">
+        <div className="text-2xl mx-auto font-normal text-black/80 text-center lg:text-left">
           <span>
             a passionate web developer who <br /> loves coding
-            <FlipWords words={flipWords} /> <br />
+            <FlipWords words={flipWords} className="text-center lg:text-left"/> <br />
           </span>
         </div>
       </div>
 
-      <div className="flex w-full h-[280px]">
-        <div className="flex flex-col w-1/3 p-4 text-sm text-black gap-4">
-          <div className="flex items-center gap-2">
+      <div className="flex flex-col lg:flex-row w-full h-[280px]">
+        <div className="flex flex-col w-full h-full lg:h-auto lg:w-1/3 p-4 text-sm text-black gap-4 items-center lg:items-start mb-10">
+          <div className="flex items-center gap-2 text-sm lg:text-lg">
             <RiPencilFill />
             Personal Info
           </div>
           <ul className="leading-6">
-            <li>
+            <li className="flex flex-col items-center lg:flex-row">
               Name:
               <span className="ml-1 font-normal">John Patrick Isidoro</span>
             </li>
-            <li>
+            <li className="flex flex-col items-center lg:flex-row">
               Date of birth:
               <span className="ml-1 font-normal">31.07.2001</span>
             </li>
-            <li>
+            <li className="flex flex-col items-center lg:flex-row">
               Email:
               <span className="ml-1 font-normal">jpisidoro04@gmail.com</span>
             </li>
-            <li>
+            <li className="flex flex-col items-center lg:flex-row">
               Phone: <span className="ml-1 font-normal">+63 991 978 5885</span>
             </li>
-            <li>
+            <li className="flex flex-col items-center lg:flex-row">
               City: <span className="ml-1 font-normal">Taguig</span>
             </li>
           </ul>
         </div>
 
-        <div className="flex flex-col w-2/3 px-2 text-black">
+        <div className="flex flex-col w-full h-72 lg:w-2/3 px-2 text-black">
           <Tabs aria-label="Skills" onSelectionChange={handleTabChange}>
             {["main-skills", "soft-skills"].map((tabKey, idx) => (
               <Tab
                 key={tabKey}
                 title={
                   <div className="flex items-center p-2 rounded-full shadow-xl">
-                    <span className="flex items-center gap-2 z-50">
+                    <span className="flex items-center gap-2 z-50 text-sm lg:text-lg">
                       <TbStarsFilled />
                       {tabKey === "main-skills" ? "Main Skills" : "Soft Skills"}
                     </span>
@@ -126,7 +127,7 @@ export function AboutMe() {
         <PopoverTrigger>
           <button
             onClick={cvBtn}
-            className="flex absolute bottom-5 right-5 font-normal outline-none text-sm mx-auto p-4 text-beige/70 items-center gap-2 bg-black rounded-full h-12 hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
+            className="flex absolute top-5 right-5 font-normal outline-none text-sm mx-auto p-4 text-beige/70 items-center gap-2 bg-black rounded-full h-12 hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
           >
             Download CV <LuDownload />
           </button>
