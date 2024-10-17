@@ -9,7 +9,7 @@ export const Experience = () => {
   return (
     <div className="flex flex-col w-full h-full gap-4">
       <div>
-        <span className="flex text-black text-2xl my-4">
+        <span className="flex text-sage text-2xl my-4">
           Companies and Institution
         </span>
       </div>

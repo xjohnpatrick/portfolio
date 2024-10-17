@@ -101,6 +101,17 @@ export const experience = [
   },
 ];
 
+export const personalInfo = [
+  {
+    id: 0,
+    fullName: "John Patrick Isidoro",
+    birthday: "31.07.2001",
+    email: "jpisidoro04@gmail.com",
+    contactNo: "+63 995 978 5885",
+    city: "Taguig"
+  },
+];
+
 // export const projectsData2021 = [
 //   {
 //     id: 0,
