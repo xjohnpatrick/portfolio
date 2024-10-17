@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import myPicture from "../public/me.jpg";
+import myPicture from "../public/me.png";
 
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Card, CardBody } from "@nextui-org/card";
@@ -9,12 +9,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import { LuDownload } from "react-icons/lu";
 import { RiPencilFill } from "react-icons/ri";
-import { TbStarsFilled } from "react-icons/tb";
+import { SiNextdotjs } from "react-icons/si";
 
 import { FlipWords } from "@/components/ui/flip-words";
-import { flipWords } from "@/data";
+import { flipWords, personalInfo } from "@/data";
 import MainSkills from "./my-skills/MainSkills";
 import SoftSkills from "./my-skills/SoftSkills";
+import SimpleBtn from "./button/SimpleBtn";
 
 export function AboutMe() {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -44,43 +45,51 @@ export function AboutMe() {
             className="flex rounded-full mb-4"
           />
         </div>
-        <div className="text-2xl mx-auto font-normal text-black/80 text-center lg:text-left">
+        <div className="text-2xl mx-auto font-normal text-sage/80 text-center lg:text-left">
           <span>
             a passionate web developer who <br /> loves coding
-            <FlipWords words={flipWords} className="text-center lg:text-left"/> <br />
+            <FlipWords
+              words={flipWords}
+              className="text-center lg:text-left"
+            />{" "}
+            <br />
           </span>
         </div>
       </div>
 
       <div className="flex flex-col lg:flex-row w-full h-[280px]">
-        <div className="flex flex-col w-full h-full lg:h-auto lg:w-1/3 p-4 text-sm text-black gap-4 items-center lg:items-start mb-10">
+        <div className="flex flex-col w-full h-full lg:h-auto lg:w-1/3 p-4 text-sm text-sage/80 gap-4 items-center lg:items-start mb-10">
           <div className="flex items-center gap-2 text-sm lg:text-lg">
             <RiPencilFill />
             Personal Info
           </div>
-          <ul className="leading-6">
-            <li className="flex flex-col items-center lg:flex-row">
-              Name:
-              <span className="ml-1 font-normal">John Patrick Isidoro</span>
-            </li>
-            <li className="flex flex-col items-center lg:flex-row">
-              Date of birth:
-              <span className="ml-1 font-normal">31.07.2001</span>
-            </li>
-            <li className="flex flex-col items-center lg:flex-row">
-              Email:
-              <span className="ml-1 font-normal">jpisidoro04@gmail.com</span>
-            </li>
-            <li className="flex flex-col items-center lg:flex-row">
-              Phone: <span className="ml-1 font-normal">+63 991 978 5885</span>
-            </li>
-            <li className="flex flex-col items-center lg:flex-row">
-              City: <span className="ml-1 font-normal">Taguig</span>
-            </li>
-          </ul>
+          {personalInfo.map((info) => (
+            <ul className="leading-6">
+              <li key={info.id}>
+                Name:
+                <span className="ml-1 font-normal">{info.fullName}</span>
+              </li>
+              <li>
+                Email:
+                <span className="ml-1 font-normal">{info.email}</span>
+              </li>
+              <li>
+                Phone:
+                <span className="ml-1 font-normal">{info.contactNo}</span>
+              </li>
+              <li>
+                Birthday:
+                <span className="ml-1 font-normal">{info.birthday}</span>
+              </li>
+              <li>
+                City:
+                <span className="ml-1 font-normal">{info.city}</span>
+              </li>
+            </ul>
+          ))}
         </div>
 
-        <div className="flex flex-col w-full h-72 lg:w-2/3 px-2 text-black">
+        <div className="flex flex-col w-full h-72 lg:w-2/3 px-2 text-beige/80">
           <Tabs aria-label="Skills" onSelectionChange={handleTabChange}>
             {["main-skills", "soft-skills"].map((tabKey, idx) => (
               <Tab
@@ -88,7 +97,7 @@ export function AboutMe() {
                 title={
                   <div className="flex items-center p-2 rounded-full shadow-xl">
                     <span className="flex items-center gap-2 z-50 text-sm lg:text-lg">
-                      <TbStarsFilled />
+                      <SiNextdotjs />
                       {tabKey === "main-skills" ? "Main Skills" : "Soft Skills"}
                     </span>
                     <AnimatePresence>
@@ -125,12 +134,11 @@ export function AboutMe() {
 
       <Popover placement="left">
         <PopoverTrigger>
-          <button
-            onClick={cvBtn}
-            className="flex absolute top-5 right-5 font-normal outline-none text-sm mx-auto p-4 text-beige/70 items-center gap-2 bg-black rounded-full h-12 hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
-          >
-            Download CV <LuDownload />
-          </button>
+          <SimpleBtn
+            title="Download CV"
+            Icon={LuDownload}
+            className="flex absolute top-5 right-5 font-normal outline-none text-sm mx-auto p-4 text-beige/70 items-center gap-2 bg-black rounded-full h-12"
+          />
         </PopoverTrigger>
         <PopoverContent>
           <div className="px-1 py-2">
