@@ -64,38 +64,34 @@ export function AboutMe() {
             Personal Info
           </div>
           {personalInfo.map((info) => (
-            <ul className="leading-6">
+            <ul className="leading-6 bg-sage h-full rounded-2xl text-beige/80 p-4">
               <li key={info.id}>
-                Name:
                 <span className="ml-1 font-normal">{info.fullName}</span>
               </li>
               <li>
-                Email:
                 <span className="ml-1 font-normal">{info.email}</span>
               </li>
               <li>
-                Phone:
                 <span className="ml-1 font-normal">{info.contactNo}</span>
               </li>
               <li>
-                Birthday:
                 <span className="ml-1 font-normal">{info.birthday}</span>
               </li>
               <li>
-                City:
                 <span className="ml-1 font-normal">{info.city}</span>
               </li>
             </ul>
           ))}
         </div>
 
-        <div className="flex flex-col w-full h-72 lg:w-2/3 px-2 text-beige/80">
-          <Tabs aria-label="Skills" onSelectionChange={handleTabChange}>
+        <div className="flex flex-col w-full h-72 lg:w-full px-2 text-beige/80 items-center gap-2">
+          <Tabs aria-label="Skills" onSelectionChange={handleTabChange} className="bg-black rounded-full flex px-1 shadow-xl">
             {["main-skills", "soft-skills"].map((tabKey, idx) => (
               <Tab
                 key={tabKey}
+                className="text-lg"
                 title={
-                  <div className="flex items-center p-2 rounded-full shadow-xl">
+                  <div className="flex items-center justify-center p-2 rounded-full">
                     <span className="flex items-center gap-2 z-50 text-sm lg:text-lg">
                       <SiNextdotjs />
                       {tabKey === "main-skills" ? "Main Skills" : "Soft Skills"}
@@ -103,7 +99,7 @@ export function AboutMe() {
                     <AnimatePresence>
                       {hoveredIndex === idx && (
                         <motion.span
-                          className="absolute inset-0 h-full w-full bg-sage rounded-full"
+                          className="absolute h-full w-full bg-sage rounded-full"
                           layoutId="hoverBackground"
                           initial={{ opacity: 0 }}
                           animate={{
@@ -119,7 +115,6 @@ export function AboutMe() {
                     </AnimatePresence>
                   </div>
                 }
-                className="flex items-center mb-4 text-lg"
               >
                 <Card className="shadow-xl p-2 rounded-2xl bg-sage">
                   <CardBody>
