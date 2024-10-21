@@ -4,12 +4,12 @@ import myPicture from "../public/me.png";
 
 import { Tabs, Tab } from "@nextui-org/tabs";
 import { Card, CardBody } from "@nextui-org/card";
-import { Popover, PopoverTrigger, PopoverContent } from "@nextui-org/popover";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { LuDownload } from "react-icons/lu";
 import { RiPencilFill } from "react-icons/ri";
-import { SiNextdotjs } from "react-icons/si";
+import { FaCode } from "react-icons/fa6";
+import { FaHandshakeAngle } from "react-icons/fa6";
 
 import { FlipWords } from "@/components/ui/flip-words";
 import { flipWords, personalInfo } from "@/data";
@@ -21,7 +21,7 @@ export function AboutMe() {
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleTabChange = (key: any) => {
-    setHoveredIndex(key === "main-skills" ? 0 : 1);
+    setHoveredIndex(key === "main" ? 0 : 1);
   };
 
   const cvBtn = () => {
@@ -34,15 +34,15 @@ export function AboutMe() {
   };
 
   return (
-    <div className="flex flex-col h-full w-full mt-10">
+    <div className="flex flex-col h-full w-full mt-4">
       <div className="flex flex-col lg:flex-row items-center">
         <div className="flex m-4">
           <Image
             src={myPicture}
+            width={200}
+            height={50}
             alt="John Patrick's Toga Picture"
-            width={192}
-            height={224}
-            className="flex rounded-full mb-4"
+            className="flex rounded-full"
           />
         </div>
         <div className="text-2xl mx-auto font-normal text-sage/80 text-center lg:text-left">
@@ -58,48 +58,63 @@ export function AboutMe() {
       </div>
 
       <div className="flex flex-col lg:flex-row w-full h-[280px]">
-        <div className="flex flex-col w-full h-full lg:h-auto lg:w-1/3 p-4 text-sm text-sage/80 gap-4 items-center lg:items-start mb-10">
+        <div className="flex flex-col w-full h-full lg:h-auto lg:w-1/3 p-4 text-sm text-sage/80 gap-4 items-center my-10">
           <div className="flex items-center gap-2 text-sm lg:text-lg">
-            <RiPencilFill />
-            Personal Info
+            <RiPencilFill /> Personal Info
           </div>
           {personalInfo.map((info) => (
             <ul className="leading-6 bg-sage h-full rounded-2xl text-beige/80 p-4">
               <li key={info.id}>
+                Name:
                 <span className="ml-1 font-normal">{info.fullName}</span>
               </li>
               <li>
+                Email:
                 <span className="ml-1 font-normal">{info.email}</span>
               </li>
               <li>
+                Phone:
                 <span className="ml-1 font-normal">{info.contactNo}</span>
               </li>
               <li>
+                Birthday:
                 <span className="ml-1 font-normal">{info.birthday}</span>
               </li>
               <li>
+                City:
                 <span className="ml-1 font-normal">{info.city}</span>
               </li>
             </ul>
           ))}
         </div>
 
-        <div className="flex flex-col w-full h-72 lg:w-full px-2 text-beige/80 items-center gap-2">
-          <Tabs aria-label="Skills" onSelectionChange={handleTabChange} className="bg-black rounded-full flex px-1 shadow-xl">
-            {["main-skills", "soft-skills"].map((tabKey, idx) => (
+        <div className="flex flex-col w-full h-72 items-center justify-center gap-2">
+          <Tabs
+            onSelectionChange={handleTabChange}
+            className="bg-black rounded-full flex p-1 shadow-xl h-10 lg:h-12"
+          >
+            {["main", "soft"].map((tabKey, idx) => (
               <Tab
                 key={tabKey}
-                className="text-lg"
                 title={
-                  <div className="flex items-center justify-center p-2 rounded-full">
-                    <span className="flex items-center gap-2 z-50 text-sm lg:text-lg">
-                      <SiNextdotjs />
-                      {tabKey === "main-skills" ? "Main Skills" : "Soft Skills"}
+                  <div className="flex items-center justify-center p-1 rounded-full">
+                    <span className="flex z-10 text-sm lg:text-lg text-beige/80 items-center gap-2">
+                      {tabKey === "main" ? (
+                        <>
+                          <FaCode />
+                          Main Skills
+                        </>
+                      ) : (
+                        <>
+                          <FaHandshakeAngle />
+                          Soft Skills
+                        </>
+                      )}
                     </span>
                     <AnimatePresence>
                       {hoveredIndex === idx && (
                         <motion.span
-                          className="absolute h-full w-full bg-sage rounded-full"
+                          className="absolute inset-0 bg-sage rounded-full"
                           layoutId="hoverBackground"
                           initial={{ opacity: 0 }}
                           animate={{
@@ -118,7 +133,7 @@ export function AboutMe() {
               >
                 <Card className="shadow-xl p-2 rounded-2xl bg-sage">
                   <CardBody>
-                    {tabKey === "main-skills" ? <MainSkills /> : <SoftSkills />}
+                    {tabKey === "main" ? <MainSkills /> : <SoftSkills />}
                   </CardBody>
                 </Card>
               </Tab>
@@ -127,20 +142,12 @@ export function AboutMe() {
         </div>
       </div>
 
-      <Popover placement="left">
-        <PopoverTrigger>
-          <SimpleBtn
-            title="Download CV"
-            Icon={LuDownload}
-            className="flex absolute top-5 right-5 font-normal outline-none text-sm mx-auto p-4 text-beige/70 items-center gap-2 bg-black rounded-full h-12"
-          />
-        </PopoverTrigger>
-        <PopoverContent>
-          <div className="px-1 py-2">
-            <div className="text-sm text-beige/80">You've got my CV!</div>
-          </div>
-        </PopoverContent>
-      </Popover>
+      <SimpleBtn
+        title="Download CV"
+        Icon={LuDownload}
+        onClick={cvBtn}
+        className="flex absolute top-5 right-5 font-normal outline-none text-sm mx-auto p-4 text-beige/70 items-center gap-2 bg-black rounded-full h-12"
+      />
     </div>
   );
 }

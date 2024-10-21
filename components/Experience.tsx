@@ -1,56 +1,73 @@
+import React from "react";
 import { experience } from "@/data";
 import Image from "next/image";
-import React from "react";
-import bcdaLogo from "../public/bcda.svg";
-import umakLogo from "../public/umak.svg";
-import cmemboApp from "../public/cmemboApp.png"
 
 export const Experience = () => {
   return (
-    <div className="flex flex-col w-full h-full gap-4">
-      <div>
-        <span className="flex text-sage text-2xl my-4">
-          Companies and Institution
-        </span>
-      </div>
-      <div>
-        <Image
-          src={bcdaLogo}
-          alt="BCDA Company Logo"
-          width={200}
-          height={300}
-        />
-        <div className="grid grid-cols-2 gap-2">
-          {experience.map((exp) => (
-            <div
-              key={exp.id}
-              className="w-96 h-40 text-2xl flex items-center justify-center px-6 py-2 border-2 border-black dark:border-white dark:text-white text-black rounded-2xl font-bold transform hover:-translate-y-1 transition duration-400"
-            >
-              {exp.description}
+    <div className="flex flex-col w-full h-full mt-4 gap-4">
+      {experience.map((exp) => (
+        <div key={exp.id}>
+          <div className="flex w-full gap-4 mb-4">
+            <Image
+              src={exp.imgLogo}
+              alt={exp.altLogo}
+              width={160}
+              height={50}
+              className={`${exp.id === 1 ? "w-24" : ""}`}
+            />
+            <div className="flex flex-col text-beige/80 justify-center">
+              <span>
+                {exp.id === 0 ? (
+                  <Image
+                    src={exp.titleImg}
+                    alt={exp.titleAlt}
+                    width={100}
+                    height={50}
+                    className="text-sm"
+                  />
+                ) : (
+                  <Image
+                    src={exp.titleImg}
+                    alt={exp.titleAlt}
+                    width={300}
+                    height={50}
+                    className="text-sm"
+                  />
+                )}
+              </span>
+              <span className="text-sm text-beige/80">{exp.title}</span>
             </div>
-          ))}
+          </div>
+          <div className="flex w-full gap-4">
+            <div>
+              {exp.id === 0 ? (
+                <Image
+                  src={exp.taskImg}
+                  alt={exp.altTask}
+                  width={250}
+                  height={50}
+                  className="rounded-2xl text-sm text-beige/80"
+                />
+              ) : (
+                <Image
+                  src={exp.taskImg}
+                  alt={exp.altTask}
+                  width={500}
+                  height={50}
+                  className="rounded-2xl text-sm text-beige/80"
+                />
+              )}
+            </div>
+            <div className="flex flex-col w-full bg-black rounded-2xl p-4 space-y-2">
+              <h1 className="text-2xl text-beige/80">{exp.position}</h1>
+              <span className="text-sm text-beige/80 italic">{exp.date}</span>
+              {exp.content?.map((item) => (
+                <p className="text-lg text-beige font-normal">{item}</p>
+              ))}
+            </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <Image
-          src={umakLogo}
-          alt="University of Makati Logo"
-          width={100}
-          height={100}
-        />
-        <div className="grid grid-cols-2 gap-2 mt-2">
-          {experience
-            .filter((exp) => exp.id === 0)
-            .map((exp) => (
-              <div
-                key={exp.id}
-                className="w-96 h-40 text-2xl flex items-center justify-center px-6 py-2 border-2 border-black dark:border-white dark:text-white text-black rounded-2xl font-bold transform hover:-translate-y-1 transition duration-400"
-              >
-                {exp.description}
-              </div>
-            ))}
-        </div>
-      </div>
+      ))}
     </div>
   );
 };
