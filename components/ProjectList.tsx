@@ -17,7 +17,7 @@ export default function ProjectList() {
                   {proj.description}
                 </span>
               </div>
-              <div className="flex items-center justify-center w-full m-4">
+              <div className="flex items-center justify-center w-full m-4 slide-scroll-right">
                 <Image
                   src={proj.img}
                   alt={proj.alt}
@@ -29,7 +29,7 @@ export default function ProjectList() {
             </>
           ) : (
             <>
-              <div className="flex items-center justify-center w-full m-4">
+              <div className="flex items-center justify-center w-full m-4 slide-scroll-left">
                 <Image
                   src={proj.img}
                   alt={proj.alt}

@@ -62,7 +62,7 @@ export const projects = [
     img: "/todoListApp.png",
     alt: "TodoList Image",
     link: "",
-    description: "Task Management System",
+    description: "Task Management System - Self-Developed",
     title: "TodoList",
   },
   {
@@ -70,7 +70,7 @@ export const projects = [
     img: "/cmemboApp.png",
     alt: "Barangay Comembo Image",
     link: "",
-    description: "Document Management System",
+    description: "Document Management System - Course Requirement",
     title: "Brgy. Comembo Web App",
   },
 ];
@@ -93,22 +93,22 @@ export const experience = [
       "Implemented front-end functionalities for Visitor's Logbook System using Next.js and Tailwind CSS.",
     ],
   },
-  {
-    id: 1,
-    title: "University of Makati",
-    titleImg: "/umakName.svg",
-    titleAlt: "UMak Title Logo",
-    description: "Front-End Developer",
-    imgLogo: "/umak.svg",
-    altLogo: "UMak Logo",
-    taskImg: "/cmemboApp.png",
-    altTask: "Task Image",
-    date: "Aug 2022 - March 2023",
-    position: "Front End Developer - Academic Year",
-    content: [
-      "Implemented front-end functionalities in the Cmembo Web App using Next.js, Tailwind CSS, and Next UI.",
-    ],
-  },
+  // {
+  //   id: 1,
+  //   title: "University of Makati",
+  //   titleImg: "/umakName.svg",
+  //   titleAlt: "UMak Title Logo",
+  //   description: "Front-End Developer",
+  //   imgLogo: "/umak.svg",
+  //   altLogo: "UMak Logo",
+  //   taskImg: "/cmemboApp.png",
+  //   altTask: "Task Image",
+  //   date: "Aug 2022 - March 2023",
+  //   position: "Front End Developer - Academic Year",
+  //   content: [
+  //     "Implemented front-end functionalities in the Cmembo Web App using Next.js, Tailwind CSS, and Next UI.",
+  //   ],
+  // },
 ];
 
 export const personalInfo = [

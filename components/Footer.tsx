@@ -33,7 +33,7 @@ const Footer = () => {
 
       <div className="flex">
         <Link href="#hero">
-          <SimpleBtn Icon={FaAnglesUp} className="bg-beige rounded-full w-12 h-12 flex items-center justify-center absolute right-20 bottom-28"/>
+          <SimpleBtn Icon={FaAnglesUp} className="bg-beige rounded-full w-12 h-12 flex items-center justify-center absolute right-20 bottom-28 animate-bounce"/>
         </Link>
       </div>
 

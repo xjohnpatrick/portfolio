@@ -9,6 +9,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/components/popover.js",
+    "./src/**/*.{html,js}",
   ],
 
   theme: {
@@ -17,14 +18,14 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         black: {
-          DEFAULT: '#3C3D37',
+          DEFAULT: "#3C3D37",
           100: "#1E201E",
         },
         sage: {
-          DEFAULT: '#697565',
+          DEFAULT: "#697565",
         },
         beige: {
-          DEFAULT: '#ECDFCC',
+          DEFAULT: "#ECDFCC",
         },
       },
       keyframes: {
@@ -40,9 +41,10 @@ const config: Config = {
       },
     },
   },
+  darkMode: "class",
   plugins: [
     addVariablesForColors,
-    require('tailwind-scrollbar-hide'),
+    require("tailwind-scrollbar-hide"),
   ],
 };
 export default config;
@@ -52,9 +54,8 @@ function addVariablesForColors({ addBase, theme }: any) {
   let newVars = Object.fromEntries(
     Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
- 
+
   addBase({
     ":root": newVars,
   });
 }
-

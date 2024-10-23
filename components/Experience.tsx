@@ -13,50 +13,29 @@ export const Experience = () => {
               alt={exp.altLogo}
               width={160}
               height={50}
-              className={`${exp.id === 1 ? "w-24" : ""}`}
             />
             <div className="flex flex-col text-beige/80 justify-center">
               <span>
-                {exp.id === 0 ? (
-                  <Image
-                    src={exp.titleImg}
-                    alt={exp.titleAlt}
-                    width={100}
-                    height={50}
-                    className="text-sm"
-                  />
-                ) : (
-                  <Image
-                    src={exp.titleImg}
-                    alt={exp.titleAlt}
-                    width={300}
-                    height={50}
-                    className="text-sm"
-                  />
-                )}
+                <Image
+                  src={exp.titleImg}
+                  alt={exp.titleAlt}
+                  width={100}
+                  height={50}
+                  className="text-sm"
+                />
               </span>
               <span className="text-sm text-beige/80">{exp.title}</span>
             </div>
           </div>
           <div className="flex w-full gap-4">
             <div>
-              {exp.id === 0 ? (
-                <Image
-                  src={exp.taskImg}
-                  alt={exp.altTask}
-                  width={250}
-                  height={50}
-                  className="rounded-2xl text-sm text-beige/80"
-                />
-              ) : (
-                <Image
-                  src={exp.taskImg}
-                  alt={exp.altTask}
-                  width={500}
-                  height={50}
-                  className="rounded-2xl text-sm text-beige/80"
-                />
-              )}
+              <Image
+                src={exp.taskImg}
+                alt={exp.altTask}
+                width={250}
+                height={50}
+                className="rounded-2xl text-sm text-beige/80"
+              />
             </div>
             <div className="flex flex-col w-full bg-black rounded-2xl p-4 space-y-2">
               <h1 className="text-2xl text-beige/80">{exp.position}</h1>

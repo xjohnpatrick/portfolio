@@ -43,7 +43,7 @@ export function BodyTabs() {
   ];
 
   return (
-    <div className="flex w-full h-screen bg-sage/80" id="work">
+    <div className="flex w-full h-screen bg-sage/80 rounded-full" id="work">
       <div className="h-[35rem] md:h-[50rem] [perspective:1000px] relative flex flex-col max-w-5xl mx-auto w-full items-start justify-start mt-10">
         <Link href="#contact">
           <SimpleBtn
@@ -52,7 +52,9 @@ export function BodyTabs() {
             className="hidden absolute top-1 right-5 text-beige lg:flex items-center gap-2 hover:bg-black z-50 rounded-full py-2 px-4"
           />
         </Link>
-        <Tabs tabs={tabs} />
+        <Tabs
+          tabs={tabs}
+        />
       </div>
     </div>
   );

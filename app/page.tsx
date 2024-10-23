@@ -5,11 +5,11 @@ import ProjectList from "@/components/ProjectList";
 
 export default function Home() {
   return (
-    <div className="flex flex-col w-full bg-black-100">
+    <main className="flex flex-col w-full bg-black-100">
       <Hero />
       <BodyTabs />
       <ProjectList/>
       <Footer />
-    </div>
+    </main>
   );
 }
