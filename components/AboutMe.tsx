@@ -18,9 +18,9 @@ import SoftSkills from "./my-skills/SoftSkills";
 import SimpleBtn from "./button/SimpleBtn";
 
 export function AboutMe() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<string | number | null>(null);
 
-  const handleTabChange = (key: any) => {
+  const handleTabChange = (key: string) => {
     setHoveredIndex(key === "main" ? 0 : 1);
   };
 
@@ -93,7 +93,7 @@ export function AboutMe() {
 
         <div className="flex flex-col w-full h-72 items-center justify-center gap-2">
           <Tabs
-            onSelectionChange={handleTabChange}
+            onSelectionChange={() => handleTabChange}
             className="bg-black rounded-full flex p-1 shadow-xl h-10 lg:h-12"
           >
             {["main", "soft"].map((tabKey, idx) => (
