@@ -7,7 +7,7 @@ export const Experience = () => {
     <div className="flex flex-col w-full h-full mt-4 gap-4">
       {experience.map((exp) => (
         <div key={exp.id}>
-          <div className="flex w-full gap-4 mb-4" key={exp.id}>
+          <div className="flex w-full gap-4 mb-4">
             <Image
               src={exp.imgLogo}
               alt={exp.altLogo}
@@ -27,7 +27,7 @@ export const Experience = () => {
               <span className="text-sm text-beige/80">{exp.title}</span>
             </div>
           </div>
-          <div className="flex w-full gap-4" key={exp.id}>
+          <div className="flex w-full gap-4">
             <div>
               <Image
                 src={exp.taskImg}
@@ -40,8 +40,8 @@ export const Experience = () => {
             <div className="flex flex-col w-full bg-black rounded-2xl p-4 space-y-2">
               <h1 className="text-2xl text-beige/80">{exp.position}</h1>
               <span className="text-sm text-beige/80 italic">{exp.date}</span>
-              {exp.content?.map((item) => (
-                <p className="text-lg text-beige font-normal">{item}</p>
+              {exp.content?.map((item, index) => (
+                <p className="text-lg text-beige font-normal" key={index}>{item}</p>
               ))}
             </div>
           </div>
