@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import { projects } from "@/data";

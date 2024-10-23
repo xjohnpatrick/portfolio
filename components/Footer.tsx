@@ -25,7 +25,7 @@ const Footer = () => {
         </p>
         <a href="mailto:jpisidoro04@gmail.com">
           <button className="flex items-center gap-2 px-4 py-2 rounded-md border border-beige/50 text-beige/80 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md">
-            Let's get in touch
+            Let&apos;s get in touch
             <FaLocationArrow />
           </button>
         </a>
@@ -33,7 +33,10 @@ const Footer = () => {
 
       <div className="flex">
         <Link href="#hero">
-          <SimpleBtn Icon={FaAnglesUp} className="bg-beige rounded-full w-12 h-12 flex items-center justify-center absolute right-20 bottom-28 animate-bounce"/>
+          <SimpleBtn
+            Icon={FaAnglesUp}
+            className="bg-beige rounded-full w-12 h-12 flex items-center justify-center absolute right-20 bottom-28 animate-bounce"
+          />
         </Link>
       </div>
 

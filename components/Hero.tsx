@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="text-center md:tracking-wider mb-4 text-lg lg:text-2xl text-beige/80 leading-tight">
             Welcome to my portfolio
             <p className="text-center md:tracking-wider my-8 text-lg lg:text-2xl text-beige/80">
-              Hi, I'm <span className="text-sage">John Patrick</span>, a
+              Hi, I&apos;m <span className="text-sage">John Patrick</span>, a
               passionate web developer working with Next.js.
             </p>
           </div>

@@ -18,7 +18,7 @@ import SoftSkills from "./my-skills/SoftSkills";
 import SimpleBtn from "./button/SimpleBtn";
 
 export function AboutMe() {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const handleTabChange = (key: any) => {
     setHoveredIndex(key === "main" ? 0 : 1);
@@ -63,8 +63,11 @@ export function AboutMe() {
             <RiPencilFill /> Personal Info
           </div>
           {personalInfo.map((info) => (
-            <ul className="leading-6 bg-sage h-full rounded-2xl text-beige/80 p-4">
-              <li key={info.id}>
+            <ul
+              className="leading-6 bg-sage h-full rounded-2xl text-beige/80 p-4"
+              key={info.id}
+            >
+              <li>
                 Name:
                 <span className="ml-1 font-normal">{info.fullName}</span>
               </li>
