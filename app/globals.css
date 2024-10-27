@@ -18,26 +18,6 @@
   display: none;
 }
 
-@keyframes slide-scroll {
-  from {
-    transform: translateX(var(--translate-x));
-    opacity: 0.1;
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
-.slide-scroll-right {
-  --translate-x: 1000px;
-  animation: slide-scroll 0.3s forwards ease-in-out;
-  animation-timeline: view();
-  animation-range: 0% cover 40%;
-}
-
-.slide-scroll-left {
-  --translate-x: -1000px;
-  animation: slide-scroll 0.3s ease-in-out;
-  animation-timeline: view();
-  animation-range: 0% cover 55%;
+.clip-trapezoid-right {
+  clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
 }

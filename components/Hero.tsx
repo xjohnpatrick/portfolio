@@ -1,33 +1,52 @@
-import React from "react";
-import { TypewriterEffect } from "./ui/typewriter-effect";
-import { words } from "@/data";
-import Link from "next/link";
+"use client";
+import React, { useEffect, useState } from "react";
 import SimpleBtn from "./button/SimpleBtn";
+import ProjectList from "@/components/ProjectList";
 
 const Hero = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 0);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
   return (
-    <div className="flex relative flex-col w-full h-screen" id="hero">
-      <span className="flex absolute top-5 left-5 text-beige">
-        © Code by John Patrick
-      </span>
+    <div className="flex flex-col w-full h-screen relative">
+      <div
+        className={`flex sticky top-0 z-50 w-full transition-all duration-300 ${
+          scrolled ? "bg-black h-12" : "bg-transparent h-16"
+        }`}
+      >
+        <button
+          className={`font-chokokutai absolute left-5 text-white uppercase transition-all duration-300 ease-in-out text-3xl ${
+            scrolled ? "top-1 text-2xl" : "top-2.5"
+          }`}
+        >
+          jpi
+        </button>
+        <div
+          className={`flex absolute right-4 text-white gap-4 transition-all duration-300 ease-in-out text-lg ${
+            scrolled ? "top-2.5" : "top-4"
+          }`}
+        >
+          <SimpleBtn title="Projects" />
+          <SimpleBtn title="Experience" />
+          <SimpleBtn title="About Me" />
+        </div>
+      </div>
 
-      <div className="flex justify-center h-full w-full">
-        <div className="flex flex-col items-center justify-center md:px-10 md:gap-10">
-          <div className="text-center md:tracking-wider mb-4 text-lg lg:text-2xl text-beige/80 leading-tight">
-            Welcome to my portfolio
-            <p className="text-center md:tracking-wider my-8 text-lg lg:text-2xl text-beige/80">
-              Hi, I&apos;m <span className="text-sage">John Patrick</span>, a
-              passionate web developer working with Next.js.
-            </p>
+      <div className="flex w-full justify-center">
+        <span className="text-[150px] text-white">I am John Patrick</span>
+      </div>
+
+      <div className="flex w-full justify-center">
+        <div>
+          <div className="flex flex-col">
+            <span className="text-sm text-gray-100 leading-3">In progress</span>
+            <span className="text-2xl text-white">Projects</span>
           </div>
-
-          <TypewriterEffect words={words} className="w-full md:w-[800px] p-2" />
-          <Link href="#work">
-            <SimpleBtn
-              title="View my work"
-              className="px-4 py-2 rounded-md text-beige text-sm bg-sage mt-4"
-            />
-          </Link>
+          <ProjectList />
         </div>
       </div>
     </div>

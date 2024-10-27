@@ -14,18 +14,23 @@ const config: Config = {
 
   theme: {
     extend: {
+      fontFamily: {
+        bebas: ["var(--font-bebas)"],
+        chokokutai: ["var(--font-chokokutai)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
         black: {
-          DEFAULT: "#3C3D37",
-          100: "#1E201E",
+          DEFAULT: "#252525",
+          100: "#1d1d1d",
         },
-        sage: {
-          DEFAULT: "#697565",
+        gray: {
+          DEFAULT: "#545454",
+          100: "#898989",
         },
-        beige: {
-          DEFAULT: "#ECDFCC",
+        white: {
+          DEFAULT: "#ffffff",
         },
       },
       keyframes: {
@@ -42,10 +47,7 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [
-    addVariablesForColors,
-    require("tailwind-scrollbar-hide"),
-  ],
+  plugins: [addVariablesForColors, require("tailwind-scrollbar-hide")],
 };
 export default config;
 
