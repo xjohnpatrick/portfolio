@@ -22,7 +22,7 @@ export default function AboutMe() {
         <span className="uppercase text-gray text-sm mt-4">About Me</span>
         <span className="uppercase text-gray text-3xl mb-4">Experience</span>
         {experience.map((exp) => (
-          <div>
+          <div key={exp.id}>
             <Image
               src={exp.imgLogo}
               alt={exp.altLogo}
