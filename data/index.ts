@@ -78,7 +78,7 @@ export const projects = [
     alt: "Barangay Comembo Image",
     link: "",
     description: "Document Management System",
-    title: "Brgy. Comembo Web App",
+    title: "Cmembo",
   },
 ];
 
