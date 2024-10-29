@@ -11,7 +11,7 @@ export default function AboutMe({ className, text }: AboutMeProps) {
   return (
     <div
       className={`flex w-full h-screen justify-center items-center ${
-        className || "bg-black-100 p-4"
+        className ? "bg-white" : "bg-black-100"
       }`}
     >
       <div
