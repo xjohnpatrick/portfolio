@@ -7,7 +7,7 @@ interface AboutMeProps {
     text?: string;
 }
 
-export default function AboutMe({ className, text }: AboutMeProps) {
+export function AboutMe({ className, text }: AboutMeProps) {
   return (
     <div
       className={`flex w-full h-screen justify-center items-center ${
