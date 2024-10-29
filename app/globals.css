@@ -21,3 +21,18 @@
 .clip-trapezoid-right {
   clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
 }
+
+/* Loading Animation */
+
+body {
+  transition-property: opacity, background, transform, filter;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+
+.page-transition {
+  opacity: 0;
+  background: #ffffff;
+  transform: translateY(20px);
+  filter: blur(8px);
+}

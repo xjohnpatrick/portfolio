@@ -1,15 +1,14 @@
 "use client";
-
 import React from "react";
-import AboutMe from "./AboutMe";
 import { capabilities } from "@/data";
 import Image from "next/image";
+import AboutMe from "@/app/info/page";
 
 export default function Capabilities() {
   return (
     <div className="flex flex-col w-full h-[1170px] relative">
       <div className="flex flex-col items-center h-[600px] w-full">
-        <div className="flex flex-col absolute top-5 lg:top-16 text-center z-20">
+        <div className="flex flex-col absolute top-5 lg:top-14 text-center z-20">
           <span className="text-gray-100">Capabilities</span>
           <span className="text-white text-2xl">Things I do</span>
         </div>
@@ -44,7 +43,9 @@ export default function Capabilities() {
         </div>
       </div>
 
-      <AboutMe />
+      <div className="flex w-full h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0">
+        <AboutMe className="bg-white"/>
+      </div>
     </div>
   );
 }

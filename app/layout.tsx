@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import { bebasNeue, chokokutai } from "./fonts/fonts";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "John Patrick's Portfolio",
-  description: "Built with Next.js and Aceternity UI",
+  title: {
+    template: "John Patrick | %s",
+    default: "John Patrick | Personal Portfolio",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${bebasNeue.className} ${chokokutai.variable}`}>
+      <body className={`bg-black-100 ${bebasNeue.className} ${chokokutai.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>
