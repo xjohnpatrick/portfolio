@@ -2,7 +2,7 @@
 import React from "react";
 import { capabilities } from "@/data";
 import Image from "next/image";
-import AboutMe from "@/app/info/page";
+import AboutMe from "@/components/AboutMe";
 
 export default function Capabilities() {
   return (
