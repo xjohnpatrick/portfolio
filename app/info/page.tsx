@@ -2,12 +2,12 @@ import { experience, personalInfo } from "@/data";
 import Image from "next/image";
 import React from "react";
 
-interface InfoProps {
+interface AboutMeProps {
     className?: string;
     text?: string;
 }
 
-export default function AboutMe({ className, text }: InfoProps) {
+export default function AboutMe({ className, text }: AboutMeProps) {
   return (
     <div
       className={`flex w-full h-screen justify-center items-center ${
