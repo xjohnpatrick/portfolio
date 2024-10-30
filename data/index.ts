@@ -1,4 +1,4 @@
-import Capabilities from '../components/Capabilities';
+import Capabilities from "../components/Capabilities";
 export const words = [
   {
     text: "Bringing",
@@ -134,5 +134,13 @@ export const personalInfo = [
       "My learning has always been driven by curiosity and a desire to grow. While college provided a foundation, it was my collaboration with friends and teammates that truly shaped my skills and development. Teamwork has become essential to my approach, as I believe the best solutions come from diverse perspectives.",
       "I am constantly seeking new opportunities to learn and contribute to impactful projects, with a focus on delivering clean, user-friendly experiences.",
     ],
+    img: [
+      "/myImage1.png",
+      "/myImage.png",
+      "/myImage4.jpg",
+      "/myImage2.jpg",
+      "/myImage3.jpg",
+    ],
+    alt: "John Patrick Images",
   },
 ];

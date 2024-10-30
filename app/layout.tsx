@@ -17,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-black-100 ${bebasNeue.className} ${chokokutai.variable}`}>
+      <body
+        className={`bg-black-100 ${bebasNeue.className} ${chokokutai.variable}`}
+      >
         <Navbar />
         {children}
       </body>

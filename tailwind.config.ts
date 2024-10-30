@@ -24,10 +24,11 @@ const config: Config = {
         black: {
           DEFAULT: "#252525",
           100: "#1d1d1d",
+          200: "#040404",
         },
         gray: {
-          DEFAULT: "#545454",
-          100: "#898989",
+          DEFAULT: "#898989",
+          100: "#545454",
         },
         white: {
           DEFAULT: "#ffffff",
