@@ -18,25 +18,27 @@ export default function Navbar() {
           scrolled ? "bg-black h-10" : "bg-transparent h-16"
         }`}
       >
-        <TransitionLink href="/">
-          <button
-            className={`font-chokokutai absolute left-4 text-white uppercase transition-all duration-300 ease-in-out text-3xl ${
-              scrolled ? "top-0 text-2xl" : "top-2.5"
-            }`}
-          >
-            jpi
-          </button>
-        </TransitionLink>
         <div
-          className={`flex absolute right-4 text-white gap-4 transition-all duration-300 ease-in-out text-lg ${
+          className={`font-chokokutai absolute left-4 text-white uppercase transition-all duration-300 ease-in-out text-3xl cursor-default ${
+            scrolled ? "top-0 text-2xl" : "top-2.5"
+          }`}
+        >
+          jpi
+        </div>
+        <div
+          className={`flex absolute right-4 text-white gap-6 transition-all duration-300 ease-in-out text-lg font-bebas ${
             scrolled ? "top-2" : "top-4"
           }`}
         >
-          <SimpleBtn title="Projects" />
+          <TransitionLink href="/">
+            <SimpleBtn title="Home" />
+          </TransitionLink>
+          <TransitionLink href="/all-projects">
+            <SimpleBtn title="Projects" />
+          </TransitionLink>
           <TransitionLink href="/info">
             <SimpleBtn title="Info" />
           </TransitionLink>
-          <SimpleBtn title="Experience" />
         </div>
       </div>
     </div>

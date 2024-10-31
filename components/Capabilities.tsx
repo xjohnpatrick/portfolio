@@ -8,8 +8,8 @@ export default function Capabilities() {
     <div className="flex flex-col w-full h-[1170px] relative">
       <div className="flex flex-col items-center h-[600px] w-full">
         <div className="flex flex-col absolute top-5 lg:top-14 text-center z-20">
-          <span className="text-gray">Capabilities</span>
-          <span className="text-white text-2xl">Things I do</span>
+          <span className="text-gray font-bebas">Capabilities</span>
+          <span className="text-white text-2xl font-bebas">Things I do</span>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full bg-black-200">
@@ -26,12 +26,12 @@ export default function Capabilities() {
               />
               <div className="absolute inset-0 bg-black-200 opacity-40 lg:group-hover:opacity-20 transition-all duration-300" />
               <div className="flex flex-col absolute bottom-20 lg:group-hover:bottom-32 transition-all text-center duration-300">
-                <span className="text-white text-4xl leading-6">
+                <span className="text-white text-4xl leading-6 font-bebas">
                   {cpb.title}
                 </span>
               </div>
               <div className="flex flex-col absolute bottom-14 lg:group-hover:bottom-24 transition-all text-center duration-300 delay-75">
-                <span className="text-gray text-lg leading-6">
+                <span className="text-gray text-lg leading-6 font-bebas">
                   {cpb.description}
                 </span>
               </div>
@@ -44,10 +44,10 @@ export default function Capabilities() {
 
       <div className="flex w-full h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white">
         <div className="flex flex-col w-[1200px] m-4">
-          <span className="uppercase tracking-wider leading-3 text-gray text-base">
+          <span className="uppercase tracking-wider leading-3 text-gray text-base font-bebas">
             Information
           </span>
-          <span className="uppercase text-gray-100 text-3xl">
+          <span className="uppercase text-gray-100 text-3xl font-bebas">
             About Me
           </span>
           {personalInfo.map((info) => (
@@ -55,7 +55,7 @@ export default function Capabilities() {
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className={`text-gray-100 font-sans mb-4 text-sm lg:text-base`}
+                  className={`text-gray-100 mb-4 text-sm lg:text-base`}
                 >
                   {paragraph}
                 </p>
@@ -64,11 +64,11 @@ export default function Capabilities() {
           ))}
 
           <span
-            className={`uppercase leading-3 text-gray text-base mt-4`}
+            className={`uppercase leading-3 text-gray text-base mt-4 font-bebas`}
           >
             About Me
           </span>
-          <span className={`uppercase text-gray-100 text-3xl mb-4`}>
+          <span className={`uppercase text-gray-100 text-3xl mb-4 font-bebas`}>
             Experience
           </span>
 

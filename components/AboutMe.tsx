@@ -7,12 +7,12 @@ export default function AboutMe() {
     <div className="flex w-full h-screen justify-center bg-black-100 p-4">
       <div className="flex flex-col w-[1200px]">
         <span
-          className="uppercase tracking-wider leading-3 text-gray text-[16px]"
+          className="font-bebas tracking-wider leading-3 text-gray text-[16px]"
         >
           Information
         </span>
         <span
-          className="uppercase text-white text-3xl"
+          className="font-bebas text-white text-3xl"
         >
           About Me
         </span>
@@ -110,7 +110,7 @@ export default function AboutMe() {
             {info.content.map((paragraph, index) => (
               <p
                 key={index}
-                className={`text-white/80 font-sans mb-4`}
+                className={`text-white/80 mb-4 text-sm`}
               >
                 {paragraph}
               </p>
@@ -119,12 +119,12 @@ export default function AboutMe() {
         ))}
 
         <span
-          className={`uppercase leading-3 text-gray text-[16px] mt-4`}
+          className={`font-bebas leading-3 text-gray text-[16px] mt-4`}
         >
           About Me
         </span>
         <span
-          className={`uppercase text-white text-3xl mb-4`}
+          className={`font-bebas text-white text-3xl mb-4`}
         >
           Experience
         </span>

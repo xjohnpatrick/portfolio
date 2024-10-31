@@ -1,9 +1,4 @@
-import { Bebas_Neue, Chokokutai, Poppins } from 'next/font/google'
-
-export const poppins = Poppins({
-  subsets: ['latin'],
-  weight: ['100', '400', '600', '700']
-});
+import { Archivo_Black, Bebas_Neue, Chokokutai, Roboto } from 'next/font/google'
 
 export const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
@@ -15,4 +10,10 @@ export const chokokutai = Chokokutai({
   subsets: ["latin"],
   weight: "400",
   variable: "--font-chokokutai",
+});
+
+export const roboto = Roboto({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-roboto",
 });

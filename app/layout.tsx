@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { bebasNeue, chokokutai } from "./fonts/fonts";
+import { bebasNeue, chokokutai, roboto } from "./fonts/fonts";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-black-100 ${bebasNeue.className} ${chokokutai.variable}`}
+        className={`bg-black-100 ${roboto.className} ${chokokutai.variable} ${bebasNeue.variable}`}
       >
         <Navbar />
         {children}
