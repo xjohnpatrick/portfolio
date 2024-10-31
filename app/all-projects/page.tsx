@@ -21,7 +21,7 @@ export default function AllProjects() {
           {projects.map((proj) => (
             <div key={proj.id} className="w-[750px] h-64 bg-black-200 relative">
               <TransitionLink href={`/projects/${proj.id}`} passHref>
-                <Image src={proj.img} alt={proj.alt} fill className="" />
+                <Image src={proj.img} alt={proj.alt} fill className="object-cover" />
               </TransitionLink>
             </div>
           ))}

@@ -1,4 +1,4 @@
-import { Archivo_Black, Bebas_Neue, Chokokutai, Roboto } from 'next/font/google'
+import { Bebas_Neue, Chokokutai, Roboto } from 'next/font/google'
 
 export const bebasNeue = Bebas_Neue({
   subsets: ["latin"],
