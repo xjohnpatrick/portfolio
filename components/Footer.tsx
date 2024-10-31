@@ -1,5 +1,6 @@
 import { socialMedia } from "@/data";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function Footer() {
@@ -12,7 +13,7 @@ export default function Footer() {
               className="w-10 h-10 cursor-pointer flex justify-center items-center bg-black rounded-2xl hover:-translate-y-1 transform transition duration-200"
               key={profile.id}
             >
-              <a href={profile.link}>
+              <Link target="_blank" rel="noopener noreferrer" href={profile.link}>
                 <Image
                   src={profile.img}
                   alt={profile.alt}
@@ -20,13 +21,11 @@ export default function Footer() {
                   height={20}
                   className="object-cover"
                 />
-              </a>
+              </Link>
             </div>
           ))}
         </div>
-        <p className="text-white text-xs font-sans">
-          © 2024 - John Patrick
-        </p>
+        <p className="text-white text-xs font-sans">© 2024 - John Patrick</p>
       </div>
     </footer>
   );

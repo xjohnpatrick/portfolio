@@ -6,16 +6,10 @@ export default function AboutMe() {
   return (
     <div className="flex w-full h-screen justify-center bg-black-100 p-4">
       <div className="flex flex-col w-[1200px]">
-        <span
-          className="font-bebas tracking-wider leading-3 text-gray text-[16px]"
-        >
+        <span className="font-bebas tracking-wider leading-3 text-gray text-[16px]">
           Information
         </span>
-        <span
-          className="font-bebas text-white text-3xl"
-        >
-          About Me
-        </span>
+        <span className="font-bebas text-white text-3xl">About Me</span>
 
         {personalInfo.map((info) => (
           <div
@@ -108,37 +102,31 @@ export default function AboutMe() {
         {personalInfo.map((info) => (
           <div key={info.id}>
             {info.content.map((paragraph, index) => (
-              <p
-                key={index}
-                className={`text-white/80 mb-4 text-sm`}
-              >
+              <p key={index} className={`text-white/80 mb-4 text-sm`}>
                 {paragraph}
               </p>
             ))}
           </div>
         ))}
 
-        <span
-          className={`font-bebas leading-3 text-gray text-[16px] mt-4`}
-        >
+        <span className={`font-bebas leading-3 text-gray text-[16px] mt-4`}>
           About Me
         </span>
-        <span
-          className={`font-bebas text-white text-3xl mb-4`}
-        >
+        <span className={`font-bebas text-white text-3xl mb-4`}>
           Experience
         </span>
-
-        {experience.map((exp) => (
-          <div key={exp.id}>
-            <Image
-              src={exp.imgLogo}
-              alt={exp.altLogo}
-              width={100}
-              height={50}
-            />
-          </div>
-        ))}
+        <div className="flex gap-4 items-center">
+          {experience.map((exp) => (
+            <div key={exp.id}>
+              <Image
+                src={exp.imgLogo}
+                alt={exp.altLogo}
+                width={100}
+                height={50}
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

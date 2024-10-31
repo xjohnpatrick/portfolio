@@ -71,17 +71,18 @@ export default function Capabilities() {
           <span className={`uppercase text-gray-100 text-3xl mb-4 font-bebas`}>
             Experience
           </span>
-
-          {experience.map((exp) => (
-            <div key={exp.id}>
-              <Image
-                src={exp.imgLogo}
-                alt={exp.altLogo}
-                width={100}
-                height={50}
-              />
-            </div>
-          ))}
+          <div className="flex gap-4 items-center">
+            {experience.map((exp) => (
+              <div key={exp.id}>
+                <Image
+                  src={exp.imgLogo}
+                  alt={exp.altLogo}
+                  width={100}
+                  height={50}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

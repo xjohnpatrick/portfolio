@@ -1,40 +1,3 @@
-export const words = [
-  {
-    text: "Bringing",
-  },
-  {
-    text: "Ideas",
-  },
-  {
-    text: "to",
-  },
-  {
-    text: "Life",
-  },
-  {
-    text: "Through",
-  },
-  {
-    text: "Intuitive",
-  },
-  {
-    text: "User",
-    className: "text-beige/80",
-  },
-  {
-    text: "Experiences",
-    className: "text-beige/80",
-  },
-];
-
-export const flipWords = [
-  "while listening to music.",
-  "for front-end development.",
-  "to bring ideas to life.",
-  "while exploring new frameworks.",
-  "and learning from others.",
-];
-
 export const socialMedia = [
   {
     id: 0,
@@ -84,7 +47,8 @@ export const projects = [
     link: "",
     description: "Task Management System",
     title: "TodoList",
-    role: "Front-End Developer / Back-End Developer",
+    website: "todolist.vercel.app",
+    role: "Front-End Developer",
     year: "2024",
     agency: "Self-Developed",
   },
@@ -105,9 +69,10 @@ export const projects = [
       "/cmemboApp11.png",
      ],
     alt: "Barangay Comembo Image",
-    link: "",
+    link: "https://queueby.vercel.app",
     description: "Document Management System",
     title: "Cmembo",
+    website: "queueby.vercel.app",
     role: "Front-End Developer",
     year: "2022-2023",
     agency: "Barangay Comembo",
@@ -120,7 +85,7 @@ export const capabilities = [
     img: "/devImg.jpg",
     alt: "Dev Image",
     link: "",
-    description: "Front-End/HTML/CSS/JS",
+    description: "Front-End/HTML/CSS/Next.js",
     title: "DEV",
   },
   {
@@ -142,6 +107,40 @@ export const experience = [
     description: ["Front-End Developer", "IT/Tech Support"],
     imgLogo: "/bcda.svg",
     altLogo: "BCDA Logo",
+    taskImg: "/taskImage1.jpg",
+    altTask: "Task Image 1",
+    date: "Feb - June 2024",
+    position: "IT/Tech Support and Front End Developer - OJT",
+    content: [
+      "Assist users in resolving technical issues related to computer systems, software, hardware, and networks.",
+      "Implemented front-end functionalities for Visitor's Logbook System using Next.js and Tailwind CSS.",
+    ],
+  },
+  {
+    id: 1,
+    title: "Bases Conversion and Development Authority",
+    titleImg: "/bcdaName.svg",
+    titleAlt: "BCDA Title Logo",
+    description: ["Front-End Developer", "IT/Tech Support"],
+    imgLogo: "/umak.svg",
+    altLogo: "UMAK Logo",
+    taskImg: "/taskImage1.jpg",
+    altTask: "Task Image 1",
+    date: "Feb - June 2024",
+    position: "IT/Tech Support and Front End Developer - OJT",
+    content: [
+      "Assist users in resolving technical issues related to computer systems, software, hardware, and networks.",
+      "Implemented front-end functionalities for Visitor's Logbook System using Next.js and Tailwind CSS.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Bases Conversion and Development Authority",
+    titleImg: "/bcdaName.svg",
+    titleAlt: "BCDA Title Logo",
+    description: ["Front-End Developer", "IT/Tech Support"],
+    imgLogo: "/comembo.svg",
+    altLogo: "Barangay Comembo Logo",
     taskImg: "/taskImage1.jpg",
     altTask: "Task Image 1",
     date: "Feb - June 2024",

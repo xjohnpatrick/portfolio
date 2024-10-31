@@ -33,6 +33,9 @@ const config: Config = {
         white: {
           DEFAULT: "#ffffff",
         },
+        blue: {
+          DEFAULT: "#57bfef",
+        },
       },
       keyframes: {
         scroll: {
