@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function AllProjects() {
   return (
-    <div className="flex flex-col w-full h-screen items-center p-4">
+    <div className="flex flex-col w-full h-screen items-center p-6">
       <div className="w-full md:w-[750px]">
         <div className="flex flex-col w-full">
           <span
@@ -24,7 +24,7 @@ export default function AllProjects() {
               className="w-full h-64 bg-black-200 relative"
             >
               <TransitionLink href={`/projects/${proj.id}`} passHref>
-                <Image src={proj.img} alt={proj.alt} fill className="object-cover" />
+                <Image src={proj.img[0]} alt={proj.alt} fill className="object-cover" />
               </TransitionLink>
             </div>
           ))}

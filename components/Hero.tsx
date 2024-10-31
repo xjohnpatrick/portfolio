@@ -13,7 +13,7 @@ const Hero = () => {
         </span>
       </div>
 
-      <div className="flex flex-col w-full p-4 lg:items-center">
+      <div className="flex flex-col w-full p-6 lg:items-center">
         <div>
           <div className="flex flex-col">
             <span className="text-sm text-gray leading-3 font-bebas">In progress</span>

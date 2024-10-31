@@ -13,7 +13,7 @@ export default function ProjectList() {
           <div className="relative">
             <TransitionLink href={`/projects/${proj.id}`} passHref>
               <Image
-                src={proj.img}
+                src={proj.img[0]}
                 alt={proj.alt}
                 fill
                 className="object-cover"

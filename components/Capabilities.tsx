@@ -43,7 +43,7 @@ export default function Capabilities() {
       </div>
 
       <div className="flex w-full h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white">
-        <div className="flex flex-col w-[1200px] m-4">
+        <div className="flex flex-col w-[1200px] mx-6">
           <span className="uppercase tracking-wider leading-3 text-gray text-base font-bebas">
             Information
           </span>
@@ -55,7 +55,7 @@ export default function Capabilities() {
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className={`text-gray-100 mb-4 text-sm lg:text-base`}
+                  className={`text-gray-100 mb-4 text-xs lg:text-base`}
                 >
                   {paragraph}
                 </p>

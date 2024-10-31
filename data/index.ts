@@ -1,4 +1,3 @@
-import Capabilities from "../components/Capabilities";
 export const words = [
   {
     text: "Bringing",
@@ -66,25 +65,52 @@ export const socialMedia = [
 export const projects = [
   {
     id: 0,
-    img: "/todoListApp.png",
+    img: [
+      "/todoListApp.png",
+      "/todoListApp1.jpg",
+      "/todoListApp2.jpg",
+      "/todoListApp3.jpg",
+      "/todoListApp4.jpg",
+      "/todoListApp5.jpg",
+      "/todoListApp6.jpg",
+      "/todoListApp7.jpg",
+      "/todoListApp8.jpg",
+      "/todoListApp9.jpg",
+      "/todoListApp10.jpg",
+      "/todoListApp11.jpg",
+      "/todoListApp12.jpg",
+    ],
     alt: "TodoList Image",
     link: "",
     description: "Task Management System",
     title: "TodoList",
     role: "Front-End Developer / Back-End Developer",
     year: "2024",
-    agency: "Self-Developed"
+    agency: "Self-Developed",
   },
   {
     id: 1,
-    img: "/cmemboApp.png",
+    img: [
+      "/cmemboApp.png",
+      "/cmemboApp1.png",
+      "/cmemboApp2.png",
+      "/cmemboApp3.png",
+      "/cmemboApp4.png",
+      "/cmemboApp5.png",
+      "/cmemboApp6.png",
+      "/cmemboApp7.png",
+      "/cmemboApp8.png",
+      "/cmemboApp9.png",
+      "/cmemboApp10.png",
+      "/cmemboApp11.png",
+     ],
     alt: "Barangay Comembo Image",
     link: "",
     description: "Document Management System",
     title: "Cmembo",
     role: "Front-End Developer",
     year: "2022-2023",
-    agency: "Barangay Comembo"
+    agency: "Barangay Comembo",
   },
 ];
 
