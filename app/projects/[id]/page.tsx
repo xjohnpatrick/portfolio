@@ -5,6 +5,7 @@ import { TransitionLink } from "@/utils/TransitionLink";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Link from "next/link";
+import SideNavigation from "@/components/SideNavigation";
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id, 10);
@@ -16,6 +17,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
   return (
     <div className="w-full flex flex-col items-center gap-4 p-6">
+      <SideNavigation/>
       <div className="flex flex-col items-center">
         <h1 className="text-gray font-bebas">{project.website}</h1>
         <p className="text-white text-3xl font-bebas">
