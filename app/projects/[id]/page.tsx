@@ -13,14 +13,16 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id, 10);
   const project = projects.find((proj) => proj.id === projectId);
 
+  useEffect(() => {
+    if (project) {
+      const components = document.querySelectorAll(".revealLeft");
+      setupObserver(components);
+    }
+  }, [project]);
+
   if (!project) {
     return <p>Project not found</p>;
   }
-
-  useEffect(() => {
-    const components = document.querySelectorAll(".revealLeft");
-    setupObserver(components);
-  }, []);
 
   return (
     <div className="w-full flex flex-col items-center gap-4 p-6">
