@@ -1,6 +1,6 @@
 "use client";
 import Link, { LinkProps } from "next/link";
-import React, { ReactNode, useState } from "react";
+import React, { ReactNode } from "react";
 import { useRouter } from "next/navigation";
 
 interface TransitionLinkProps extends LinkProps {
@@ -23,7 +23,7 @@ export const TransitionLink = ({
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) => {
     e.preventDefault();
-
+    window.scrollTo({ top: 0, behavior: "smooth" });
     const body = document.querySelector("body");
 
     body?.classList.add("page-transition");
@@ -31,11 +31,10 @@ export const TransitionLink = ({
     router.push(href);
     await sleep(500);
     body?.classList.remove("page-transition");
-
   };
   return (
-      <Link onClick={handleTransition} href={href} {...props}>
-        {children}
-      </Link>
+    <Link onClick={handleTransition} href={href} {...props}>
+      {children}
+    </Link>
   );
 };

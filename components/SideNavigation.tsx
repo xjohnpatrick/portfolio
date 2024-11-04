@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
 import { SlArrowUp } from "react-icons/sl";
+import { RxDoubleArrowUp } from "react-icons/rx";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
 import { SlArrowDown } from "react-icons/sl";
+import { RxDoubleArrowDown } from "react-icons/rx";
 import { TransitionLink } from "@/utils/TransitionLink";
 
 export default function SideNavigation() {
@@ -29,7 +31,7 @@ export default function SideNavigation() {
             onClick={scrollUp}
             className="flex w-full h-full absolute bg-white text-black items-center justify-center boxNav-back"
           >
-            <SlArrowUp size={16} />
+            <RxDoubleArrowUp size={24} />
           </button>
         </div>
       </div>
@@ -57,7 +59,7 @@ export default function SideNavigation() {
             onClick={scrollDown}
             className="flex w-full h-full absolute bg-white text-black items-center justify-center boxNav2-back"
           >
-            <SlArrowDown size={16} />
+            <RxDoubleArrowDown size={24} />
           </button>
         </div>
       </div>
