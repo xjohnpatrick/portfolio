@@ -119,10 +119,10 @@ body {
 
 /*Box CSS*/
 
-.box, .box2 {
+.box, .box2, .boxNav, .boxNav2, .boxNav3 {
   perspective: 1000px;
 }
-.box-inner, .box2-inner {
+.box-inner, .box2-inner, .boxNav-inner, .boxNav2-inner, .boxNav3-inner {
   transition: transform 0.3s;
   transform-style: preserve-3d;
 }
@@ -144,5 +144,35 @@ body {
 }
 .box2-back {
   transform: rotateY(-90deg) translateZ(250px);
+  backface-visibility: hidden;
+}
+.boxNav:hover .boxNav-inner {
+  transform: rotateX(90deg);
+}
+.boxNav-front {
+  transform: translateZ(20px);
+}
+.boxNav-back {
+  transform: rotateX(-90deg) translateZ(20px);
+  backface-visibility: hidden;
+}
+.boxNav2:hover .boxNav2-inner {
+  transform: rotateX(-90deg);
+}
+.boxNav2-front {
+  transform: translateZ(20px);
+}
+.boxNav2-back {
+  transform: rotateX(90deg) translateZ(20px);
+  backface-visibility: hidden;
+}
+.boxNav3:hover .boxNav3-inner {
+  transform: rotateY(90deg);
+}
+.boxNav3-front {
+  transform: translateZ(20px);
+}
+.boxNav3-back {
+  transform: rotateY(-90deg) translateZ(20px);
   backface-visibility: hidden;
 }
