@@ -1,6 +1,6 @@
 "use client";
 import Link, { LinkProps } from "next/link";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import { useRouter } from "next/navigation";
 
 interface TransitionLinkProps extends LinkProps {
@@ -34,8 +34,8 @@ export const TransitionLink = ({
 
   };
   return (
-    <Link onClick={handleTransition} href={href} {...props}>
-      {children}
-    </Link>
+      <Link onClick={handleTransition} href={href} {...props}>
+        {children}
+      </Link>
   );
 };

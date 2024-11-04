@@ -1,22 +1,20 @@
 "use client";
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import { SlArrowUp } from "react-icons/sl";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { TfiClose } from "react-icons/tfi";
 import { SlArrowDown } from "react-icons/sl";
-import { TransitionLink } from '@/utils/TransitionLink';
+import { TransitionLink } from "@/utils/TransitionLink";
 
 export default function SideNavigation() {
   const [isHovered, setIsHovered] = useState(false);
 
   const toggleHover = (hovering: boolean) => setIsHovered(hovering);
 
-  // Scroll up by 500px with smooth animation
   const scrollUp = () => {
     window.scrollBy({ top: -1000, behavior: "smooth" });
   };
 
-  // Scroll down by 500px with smooth animation
   const scrollDown = () => {
     window.scrollBy({ top: 1000, behavior: "smooth" });
   };
@@ -35,7 +33,7 @@ export default function SideNavigation() {
           onMouseEnter={() => toggleHover(true)}
           onMouseLeave={() => toggleHover(false)}
         >
-          {isHovered ? <TfiClose size={16} /> : <RxHamburgerMenu size={16} />}
+          {isHovered ? <RxHamburgerMenu size={16} /> : <TfiClose size={16} />}
         </button>
       </TransitionLink>
       <button

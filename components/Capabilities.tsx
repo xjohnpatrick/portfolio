@@ -1,12 +1,17 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { capabilities, experience, personalInfo } from "@/data";
 import Image from "next/image";
+import { setupObserver } from "@/app/scroll";
 
 export default function Capabilities() {
+  useEffect(() => {
+    const components = document.querySelectorAll(".revealRight, .revealLeft");
+    setupObserver(components);
+  }, []);
   return (
-    <div className="flex flex-col w-full h-[1170px] relative">
-      <div className="flex flex-col items-center h-[600px] w-full">
+    <div className="flex flex-col w-full h-[1250px] lg:h-[1170px] relative">
+      <div className="flex flex-col items-center h-[600px] w-full revealRight">
         <div className="flex flex-col absolute top-5 lg:top-14 text-center z-20">
           <span className="text-gray font-bebas">Capabilities</span>
           <span className="text-white text-2xl font-bebas">Things I do</span>
@@ -42,7 +47,7 @@ export default function Capabilities() {
         </div>
       </div>
 
-      <div className="flex w-full h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white">
+      <div className="flex w-full h-[700px] lg:h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white revealLeft">
         <div className="flex flex-col w-[1200px] mx-6">
           <span className="uppercase tracking-wider leading-3 text-gray text-base font-bebas">
             Information

@@ -36,3 +36,113 @@ body {
   transform: translateY(20px);
   filter: blur(8px);
 }
+
+@keyframes revealAnimationRight {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes revealAnimationLeft {
+  from {
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes revealAnimationUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes revealAnimationDown {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.revealRight.show {
+  opacity: 1;
+  animation: revealAnimationRight 0.6s ease-in-out forwards;
+}
+
+.revealRight {
+  opacity: 0;
+}
+
+.revealLeft.show {
+  opacity: 1;
+  animation: revealAnimationLeft 0.6s ease-in-out forwards;
+}
+
+.revealLeft {
+  opacity: 0;
+}
+
+.revealUp.show {
+  opacity: 1;
+  animation: revealAnimationUp 0.6s ease-in-out forwards;
+}
+
+.revealUp {
+  opacity: 0;
+}
+
+.revealDown.show {
+  opacity: 1;
+  animation: revealAnimationDown 0.6s ease-in-out forwards;
+}
+
+.revealDown {
+  opacity: 0;
+}
+
+/*Box CSS*/
+
+.box, .box2 {
+  perspective: 1000px;
+}
+.box-inner, .box2-inner {
+  transition: transform 0.3s;
+  transform-style: preserve-3d;
+}
+.box:hover .box-inner {
+  transform: rotateX(90deg);
+}
+.box2:hover .box2-inner {
+  transform: rotateY(90deg);
+}
+.box-front {
+  transform: translateZ(120px);
+}
+.box2-front {
+  transform: translateZ(250px);
+}
+.box-back {
+  transform: rotateX(-90deg) translateZ(100px);
+  backface-visibility: hidden;
+}
+.box2-back {
+  transform: rotateY(-90deg) translateZ(250px);
+  backface-visibility: hidden;
+}

@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import { projects } from "@/data";
 import Image from "next/image";
 import { TransitionLink } from "@/utils/TransitionLink";
@@ -6,6 +7,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Link from "next/link";
 import SideNavigation from "@/components/SideNavigation";
+import { setupObserver } from "@/app/scroll";
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
   const projectId = parseInt(params.id, 10);
@@ -15,13 +17,21 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     return <p>Project not found</p>;
   }
 
+  useEffect(() => {
+    const components = document.querySelectorAll(".revealLeft");
+    setupObserver(components);
+  }, []);
+
   return (
     <div className="w-full flex flex-col items-center gap-4 p-6">
-      <SideNavigation/>
+      <SideNavigation />
       <div className="flex flex-col items-center">
         <h1 className="text-gray font-bebas">{project.website}</h1>
-        <p className="text-white text-3xl font-bebas">
+        <span className="text-white text-3xl font-bebas">
           {project.title} - {project.description}
+        </span>
+        <p className="text-gray text-sm text-center">
+          {project.about}
         </p>
       </div>
       <div className="flex gap-4">
@@ -54,7 +64,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         {project.img.map((image, index) => (
           <div
             key={index}
-            className="relative w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-64 sm:h-80 md:h-96 lg:h-[600px]"
+            className="relative w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-64 sm:h-80 md:h-96 lg:h-[600px] revealLeft"
           >
             <Image src={image} alt={project.alt} fill />
           </div>
