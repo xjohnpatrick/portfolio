@@ -23,7 +23,7 @@ export default function ProjectList() {
           {projects.map((proj) => (
             <div
               key={proj.id}
-              className="box2 grid grid-cols-1 w-[420px] h-64 lg:w-[500px] lg:h-72"
+              className="box2 grid grid-cols-1 w-[380px] h-64 lg:w-[500px] lg:h-72"
             >
               <TransitionLink href={`/projects/${proj.id}`} passHref>
                 <div className="box2-inner relative w-full h-full">
