@@ -4,7 +4,7 @@ import React from "react";
 
 export default function AboutMe() {
   return (
-    <div className="flex w-full h-screen justify-center bg-black-100 p-4">
+    <div className="flex w-full h-[1000px] justify-center p-4">
       <div className="flex flex-col w-[1200px]">
         <span className="font-bebas tracking-wider leading-3 text-gray text-[16px]">
           Information
@@ -12,89 +12,17 @@ export default function AboutMe() {
         <span className="font-bebas text-white text-3xl">About Me</span>
 
         {personalInfo.map((info) => (
-          <div
-            key={info.id}
-            className="grid grid-cols-2 lg:grid-cols-6 bg-black-200 h-96 my-4 p-1 gap-1"
-          >
-            <div className="w-full relative col-span-1 lg:col-span-3">
-              <Image
-                src={info.img[0]}
-                alt={info.alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="hidden lg:flex w-full relative">
-              <Image
-                src={info.img[1]}
-                alt={info.alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="hidden lg:flex w-full relative">
-              <Image
-                src={info.img[2]}
-                alt={info.alt}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="hidden lg:grid grid-flow-row">
-              <div className="w-full relative ">
+          <div className="flex w-full bg-black-200 h-96 my-4 p-1">
+            <div className="flex bg-green-100 w-full p-1">
+              <div className="flex w-full bg-red-100 relative">
                 <Image
-                  src={info.img[3]}
+                  src={info.img[0]}
                   alt={info.alt}
                   fill
                   className="object-cover"
                 />
               </div>
-              <div className="w-full relative ">
-                <Image
-                  src={info.img[4]}
-                  alt={info.alt}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-            <div className="lg:hidden flex flex-col gap-1">
-              <div className="grid grid-cols-2 h-full gap-1">
-                <div className="w-full relative">
-                  <Image
-                    src={info.img[1]}
-                    alt={info.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="w-full relative">
-                  <Image
-                    src={info.img[2]}
-                    alt={info.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="grid grid-cols-2 h-full gap-1">
-                <div className="w-full relative">
-                  <Image
-                    src={info.img[3]}
-                    alt={info.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="w-full relative">
-                  <Image
-                    src={info.img[4]}
-                    alt={info.alt}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+              <div className="flex w-full bg-yellow-100"></div>
             </div>
           </div>
         ))}

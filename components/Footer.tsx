@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="flex items-center gap-2">
           {socialMedia.map((profile) => (
             <div
-              className="w-10 h-10 cursor-pointer flex justify-center items-center bg-black rounded-2xl hover:-translate-y-1 transform transition duration-200"
+              className="w-10 h-10 cursor-pointer flex justify-center items-center bg-black rounded-2xl lg:hover:-translate-y-1 lg:transform lg:transition lg:duration-200"
               key={profile.id}
             >
               <Link target="_blank" rel="noopener noreferrer" href={profile.link}>
