@@ -183,7 +183,7 @@ body {
   }
 }
 
-@media (max-width: 599px) {
+/* @media (max-width: 599px) {
   .box2-front {
     transform: translateZ(170px);
   }
@@ -192,7 +192,7 @@ body {
     transform: rotateY(-90deg) translateZ(170px);
     backface-visibility: hidden;
   }
-}
+} */
 
 .boxNav:hover .boxNav-inner {
   transform: rotateX(90deg);

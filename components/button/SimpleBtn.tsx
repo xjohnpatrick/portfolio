@@ -13,7 +13,7 @@ export default function SimpleBtn({ title, Icon, className, onClick, isActive }:
     <div>
       <button
         onClick={onClick}
-        className={`hover:-translate-y-1 transform transition duration-200 hover:shadow-md ${
+        className={`lg:hover:-translate-y-1 lg:transform lg:transition lg:duration-200 lg:hover:shadow-md ${
           isActive ? "text-blue" : "text-white"
         } ${className}`}
       >

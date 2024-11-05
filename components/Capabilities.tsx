@@ -6,7 +6,7 @@ import { setupObserver } from "@/app/scroll";
 
 export default function Capabilities() {
   useEffect(() => {
-    const components = document.querySelectorAll(".revealRight, .revealLeft");
+    const components = document.querySelectorAll(".revealUp, .revealRight");
     setupObserver(components);
   }, []);
   return (
@@ -47,7 +47,7 @@ export default function Capabilities() {
         </div>
       </div>
 
-      <div className="flex w-full h-[700px] lg:h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white revealLeft">
+      <div className="flex w-full h-[700px] lg:h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white revealUp">
         <div className="flex flex-col w-[1200px] mx-6">
           <span className="uppercase tracking-wider leading-3 text-gray text-base font-bebas">
             Information
