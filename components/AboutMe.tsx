@@ -13,8 +13,8 @@ export default function AboutMe() {
 
         {personalInfo.map((info) => (
           <div key={info.id} className="flex w-full bg-black-200 h-96 my-4 p-1">
-            <div className="flex bg-green-100 w-full p-1">
-              <div className="flex w-full bg-red-100 relative">
+            <div className="flex w-full gap-1">
+              <div className="flex w-full relative">
                 <Image
                   src={info.img[0]}
                   alt={info.alt}
@@ -22,7 +22,44 @@ export default function AboutMe() {
                   className="object-cover"
                 />
               </div>
-              <div className="flex w-full bg-yellow-100"></div>
+              <div className="flex flex-col w-full gap-1">
+                <div className="flex w-full h-full gap-1">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src={info.img[1]}
+                      alt={info.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="w-full h-full relative">
+                    <Image
+                      src={info.img[2]}
+                      alt={info.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+                <div className="flex w-full h-full gap-1">
+                  <div className="w-full h-full relative">
+                    <Image
+                      src={info.img[3]}
+                      alt={info.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="w-full h-full relative">
+                    <Image
+                      src={info.img[4]}
+                      alt={info.alt}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         ))}
