@@ -28,8 +28,8 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     <div className="w-full flex flex-col items-center gap-4 p-6">
       <SideNavigation />
       <div className="flex flex-col items-center">
-        <h1 className="text-gray font-bebas">{project.website}</h1>
-        <span className="text-white text-3xl font-bebas text-center">
+        <h1 className="text-gray font-bebas text-sm lg:text-base">{project.website}</h1>
+        <span className="text-white text-xl lg:text-3xl font-bebas text-center">
           {project.title} - {project.description}
         </span>
         <p className="text-gray text-sm text-center">{project.about}</p>
