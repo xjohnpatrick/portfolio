@@ -12,19 +12,19 @@ export default function ProjectList() {
     setupObserver(components);
   }, []);
   return (
-    <div className="flex flex-col w-full justify-center items-center h-[700px] lg:h-[500px]">
-      <div className="flex flex-col revealUp">
-        <span className="text-gray font-bebas text-sm leading-3">
-          In Progress
-        </span>
-        <span className="text-white font-bebas text-3xl">Projects</span>
-
-        <div className="flex flex-col lg:flex-row gap-4 mt-4">
+    <div className="flex flex-col w-full h-[700px] lg:h-[500px] items-center p-6">
+      <div className="w-[340px] sm:w-[400px] lg:w-[1000px]">
+        <div className="flex flex-col w-full">
+          <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
+            In Progress
+          </span>
+          <span className="uppercase text-white text-3xl mb-4 font-bebas">
+            Projects
+          </span>
+        </div>
+        <div className="flex flex-col lg:flex-row w-full gap-10">
           {projects.map((proj) => (
-            <div
-              key={proj.id}
-              className="box2 grid grid-cols-1 w-[340px] h-64 lg:w-[500px] lg:h-72"
-            >
+            <div key={proj.id} className="w-full h-[240px] lg:h-72 box2">
               <TransitionLink href={`/projects/${proj.id}`} passHref>
                 <div className="box2-inner relative w-full h-full">
                   <Image
@@ -35,9 +35,9 @@ export default function ProjectList() {
                   />
 
                   <div
-                    className="box2-back bg-black w-full h-full flex flex-col items-center justify-center"
+                    className="box2-back w-full h-full flex flex-col items-center justify-center bg-black"
                     style={{
-                      backgroundImage: "url('/bg_box2.jpg')",
+                      backgroundImage: "url('/bg_box.jpg')",
                       backgroundSize: "cover",
                       backgroundPosition: "center",
                       backgroundRepeat: "no-repeat",
@@ -46,7 +46,7 @@ export default function ProjectList() {
                     <span className="text-white font-bebas text-2xl">
                       {proj.title}
                     </span>
-                    <span className="text-white font-bebas text-4xl">
+                    <span className="text-white font-bebas text-4xl text-center">
                       {proj.description}
                     </span>
                   </div>

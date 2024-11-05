@@ -17,7 +17,7 @@ export default function Capabilities() {
           <span className="text-white text-2xl font-bebas">Things I do</span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full bg-black-200">
+        <div className="grid grid-cols-1 sm:grid-cols-2 h-full w-full bg-black-100">
           {capabilities.map((cpb) => (
             <div
               key={cpb.id}
@@ -29,7 +29,7 @@ export default function Capabilities() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-black-200 opacity-40 lg:group-hover:opacity-20 transition-all duration-300" />
+              <div className="absolute inset-0 bg-black-100 opacity-60 lg:group-hover:opacity-30 transition-all duration-300" />
               <div className="flex flex-col absolute bottom-20 lg:group-hover:bottom-32 transition-all text-center duration-300">
                 <span className="text-white text-4xl leading-6 font-bebas">
                   {cpb.title}

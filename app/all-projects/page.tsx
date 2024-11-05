@@ -9,11 +9,11 @@ export default function AllProjects() {
       <div className="w-full md:w-[750px]">
         <div className="flex flex-col w-full">
           <span
-            className={`uppercase leading-3 text-gray text-base mt-4 font-bebas`}
+            className="uppercase leading-3 text-gray text-base mt-4 font-bebas"
           >
             2023-2024
           </span>
-          <span className={`uppercase text-white text-3xl mb-4 font-bebas`}>
+          <span className="uppercase text-white text-3xl mb-4 font-bebas">
             Projects
           </span>
         </div>

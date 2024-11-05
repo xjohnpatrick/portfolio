@@ -119,6 +119,27 @@ body {
 
 /*Box CSS*/
 
+@media (hover: none) {
+  .box, .box2, .boxNav, .boxNav2, .boxNav3 {
+    perspective: none; /* Disable perspective */
+  }
+
+  .box-inner, .box2-inner, .boxNav-inner, .boxNav2-inner, .boxNav3-inner {
+    transition: none; /* Disable transition */
+    transform-style: flat; /* Change transform-style */
+  }
+
+  /* Reset the transformations */
+  .box:hover .box-inner,
+  .box2:hover .box2-inner,
+  .boxNav:hover .boxNav-inner,
+  .boxNav2:hover .boxNav2-inner,
+  .boxNav3:hover .boxNav3-inner {
+    transform: none; /* Remove transformations */
+  }
+}
+
+
 .box, .box2, .boxNav, .boxNav2, .boxNav3 {
   perspective: 1000px;
 }
@@ -135,17 +156,44 @@ body {
 .box-front {
   transform: translateZ(120px);
 }
-.box2-front {
-  transform: translateZ(250px);
-}
+
 .box-back {
   transform: rotateX(-90deg) translateZ(100px);
   backface-visibility: hidden;
 }
-.box2-back {
-  transform: rotateY(-90deg) translateZ(250px);
-  backface-visibility: hidden;
+
+@media (min-width: 1025px) {
+  .box2-front {
+    transform: translateZ(240px);
+  }
+
+  .box2-back {
+    transform: rotateY(-90deg) translateZ(240px);
+    backface-visibility: hidden;
+  }
 }
+@media (min-width: 600px) and (max-width: 1024px) {
+  .box2-front {
+    transform: translateZ(200px);
+  }
+
+  .box2-back {
+    transform: rotateY(-90deg) translateZ(200px);
+    backface-visibility: hidden;
+  }
+}
+
+@media (max-width: 599px) {
+  .box2-front {
+    transform: translateZ(170px);
+  }
+
+  .box2-back {
+    transform: rotateY(-90deg) translateZ(170px);
+    backface-visibility: hidden;
+  }
+}
+
 .boxNav:hover .boxNav-inner {
   transform: rotateX(90deg);
 }
