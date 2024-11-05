@@ -35,17 +35,17 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         <p className="text-gray text-sm text-center">{project.about}</p>
       </div>
       <div className="flex gap-4">
-        <p className="flex text-white text-[10px]">
+        <p className="flex text-white text-[8px] sm:text-[10px]">
           Role:
-          <span className="text-gray text-[10px] ml-1">{project.role}</span>
+          <span className="text-gray text-[8px] sm:text-[10px] ml-1">{project.role}</span>
         </p>
-        <p className="flex text-white text-[10px]">
+        <p className="flex text-white text-[8px] sm:text-[10px]">
           Organization:
-          <span className="flex text-gray text-[10px] ml-1">{project.agency}</span>
+          <span className="flex text-gray text-[8px] sm:text-[10px] ml-1">{project.agency}</span>
         </p>
-        <p className="flex text-white text-[10px]">
+        <p className="flex text-white text-[8px] sm:text-[10px]">
           Year:
-          <span className="text-gray text-[10px] ml-1">{project.year}</span>
+          <span className="text-gray text-[8px] sm:text-[10px] ml-1">{project.year}</span>
         </p>
       </div>
       {project.link && (
@@ -64,13 +64,13 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         {project.img.map((image, index) => (
           <div
             key={index}
-            className="relative w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-40 sm:h-80 md:h-96 lg:h-[600px] revealLeft"
+            className="relative w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-52 sm:h-80 md:h-96 lg:h-[600px] revealLeft"
           >
             <Image
               src={image}
               alt={project.alt}
               fill
-              className="object-contain lg:object-cover"
+              className="object-cover"
             />
           </div>
         ))}
