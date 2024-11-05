@@ -12,7 +12,7 @@ export default function AboutMe() {
         <span className="font-bebas text-white text-3xl">About Me</span>
 
         {personalInfo.map((info) => (
-          <div className="flex w-full bg-black-200 h-96 my-4 p-1">
+          <div key={info.id} className="flex w-full bg-black-200 h-96 my-4 p-1">
             <div className="flex bg-green-100 w-full p-1">
               <div className="flex w-full bg-red-100 relative">
                 <Image
