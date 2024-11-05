@@ -32,7 +32,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         <span className="text-white text-xl lg:text-3xl font-bebas text-center">
           {project.title} - {project.description}
         </span>
-        <p className="text-gray text-sm text-center">{project.about}</p>
+        <p className="text-gray text-xs lg:text-sm text-center">{project.about}</p>
       </div>
       <div className="flex gap-4">
         <p className="flex text-white text-[8px] sm:text-[10px]">
