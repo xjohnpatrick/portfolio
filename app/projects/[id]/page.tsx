@@ -49,7 +49,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         </p>
       </div>
       {project.link && (
-        <div>
+        <div key={project.id}>
           <Link
             target="_blank"
             rel="noopener noreferrer"

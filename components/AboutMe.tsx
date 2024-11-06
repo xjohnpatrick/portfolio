@@ -22,9 +22,7 @@ export default function AboutMe() {
                   className="object-cover"
                 />
               </div>
-              {/* */}
               <div className="flex flex-col lg:flex-row w-full gap-1">
-                {/* */}
                 <div className="flex w-full h-full gap-1">
                   <div className="w-full h-full relative">
                     <Image
@@ -43,7 +41,6 @@ export default function AboutMe() {
                     />
                   </div>
                 </div>
-                {/* */}
                 <div className="flex lg:flex-col w-full h-full gap-1">
                   <div className="w-full h-full relative">
                     <Image
@@ -63,7 +60,6 @@ export default function AboutMe() {
                   </div>
                 </div>
               </div>
-              {/* */}
             </div>
           </div>
         ))}
