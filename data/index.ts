@@ -4,24 +4,28 @@ export const socialMedia = [
     img: "/git.svg",
     alt: "github icon",
     link: "https://github.com/xjohnpatrick",
+    text: "Explore my GitHub!",
   },
   {
     id: 1,
     img: "/fb.svg",
     alt: "facebook icon",
     link: "https://www.facebook.com/JpIsidoro15/",
+    text: "Check out my Facebook!",
   },
   {
     id: 2,
     img: "/link.svg",
     alt: "linkedin icon",
     link: "https://www.linkedin.com/in/jpisidoro15/",
+    text: "Let's connect on LinkedIn!",
   },
   {
     id: 3,
     img: "/mail.svg",
     alt: "mail icon",
     link: "mailto:jpisidoro04@gmail.com",
+    text: "Want to collaborate? Get in touch via email!",
   },
 ];
 
