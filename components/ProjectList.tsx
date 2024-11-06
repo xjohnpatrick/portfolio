@@ -36,7 +36,7 @@ export default function ProjectList() {
                       src={proj.img[0]}
                       alt={proj.alt}
                       fill
-                      className="object-cover box2-front"
+                      className="object-contain box2-front"
                     />
 
                     <div
@@ -68,7 +68,7 @@ export default function ProjectList() {
                       src={proj.img[0]}
                       alt={proj.alt}
                       fill
-                      className="object-cover"
+                      className="object-contain"
                     />
                   </div>
                 </TransitionLink>
