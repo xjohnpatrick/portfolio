@@ -13,7 +13,7 @@ export default function ProjectList() {
   }, []);
   return (
     <div className="flex flex-col w-full h-[500px] items-center p-6">
-      <div className="w-[340px] sm:w-[400px] lg:w-[1000px] revealLeft">
+      <div className="w-[300px] sm:w-[400px] lg:w-[1000px] revealLeft">
         <div className="flex flex-col w-full">
           <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
             In Progress
