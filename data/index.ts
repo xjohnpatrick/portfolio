@@ -173,3 +173,18 @@ export const personalInfo = [
     alt: "John Patrick Images",
   },
 ];
+
+export const heroText = [
+  {
+    text: [
+      "John Patrick",
+      "I am a",
+      "Developer",
+      "Gamer",
+      "Melophile",
+      "Some know me as",
+      "Valdesis",
+      "Silvenia",
+    ],
+  },
+];

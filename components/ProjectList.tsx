@@ -28,7 +28,7 @@ export default function ProjectList() {
               {/* FOR LARGE DEVICES */}
               <div
                 key={proj.id}
-                className="hidden sm:block w-full h-[240px] lg:h-72 box2"
+                className="hidden sm:block w-full h-[230px] lg:h-[275px] box2"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="box2-inner relative w-full h-full">
@@ -43,8 +43,7 @@ export default function ProjectList() {
                       className="box2-back w-full h-full flex flex-col items-center justify-center bg-black"
                       style={{
                         backgroundImage: "url('/bg_box2.jpg')",
-                        backgroundSize: "cover",
-                        backgroundPosition: "center",
+                        backgroundSize: "contain",
                         backgroundRepeat: "no-repeat",
                       }}
                     >

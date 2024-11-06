@@ -224,3 +224,30 @@ body {
   transform: rotateY(-90deg) translateZ(20px);
   backface-visibility: hidden;
 }
+
+@keyframes cinematicFlyInOut {
+  0% {
+    transform: scale(0.2) rotateX(180deg); /* Start large with an X-axis tilt */
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1) rotateX(0deg); /* Fly in, face forward, slight overshoot */
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1) rotateX(0deg); /* Settle at normal size, no rotation */
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1) rotateX(0deg); /* Start to fly out with slight overshoot */
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.2) rotateX(180deg); /* Fly out large and tilted on X-axis */
+    opacity: 0;
+  }
+}
+
+.fly {
+  animation: cinematicFlyInOut 6s ease-in-out infinite;
+}

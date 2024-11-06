@@ -62,6 +62,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           </Link>
         </div>
       )}
+
       <div className="flex flex-wrap justify-center gap-4 w-full">
         {project.img.map((image, index) => (
           <div
@@ -72,17 +73,18 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
               src={image}
               alt={project.alt}
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         ))}
       </div>
+
       <div className="flex gap-4 mt-4">
         {[
           {
             label: "Home",
             href: "/",
-            icon: <IoIosArrowBack />,
+            icon: <IoIosArrowBack />, 
           },
           {
             label: "All Projects",
