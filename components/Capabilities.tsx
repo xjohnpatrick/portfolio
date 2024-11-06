@@ -60,7 +60,7 @@ export default function Capabilities() {
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className={`text-gray-100 mb-4 text-xs lg:text-base`}
+                  className="text-gray-100 mb-4 text-xs lg:text-base"
                 >
                   {paragraph}
                 </p>
@@ -68,12 +68,10 @@ export default function Capabilities() {
             </div>
           ))}
 
-          <span
-            className={`uppercase leading-3 text-gray text-base mt-4 font-bebas`}
-          >
+          <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
             About Me
           </span>
-          <span className={`uppercase text-gray-100 text-3xl mb-4 font-bebas`}>
+          <span className="uppercase text-gray-100 text-3xl mb-4 font-bebas">
             Experience
           </span>
           <div className="flex gap-4 items-center">

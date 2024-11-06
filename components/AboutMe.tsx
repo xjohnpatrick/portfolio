@@ -22,42 +22,32 @@ export default function AboutMe() {
                   className="object-cover"
                 />
               </div>
+
               <div className="flex flex-col lg:flex-row w-full gap-1">
                 <div className="flex w-full h-full gap-1">
-                  <div className="w-full h-full relative">
-                    <Image
-                      src={info.img[1]}
-                      alt={info.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="w-full h-full relative">
-                    <Image
-                      src={info.img[2]}
-                      alt={info.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  {[info.img[1], info.img[2]].map((src, index) => (
+                    <div key={index} className="w-full h-full relative">
+                      <Image
+                        src={src}
+                        alt={info.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
                 </div>
+
                 <div className="flex lg:flex-col w-full h-full gap-1">
-                  <div className="w-full h-full relative">
-                    <Image
-                      src={info.img[3]}
-                      alt={info.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                  <div className="w-full h-full relative">
-                    <Image
-                      src={info.img[4]}
-                      alt={info.alt}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
+                  {[info.img[3], info.img[4]].map((src, index) => (
+                    <div key={index} className="w-full h-full relative">
+                      <Image
+                        src={src}
+                        alt={info.alt}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>

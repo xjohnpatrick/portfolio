@@ -28,26 +28,28 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     <div className="w-full flex flex-col items-center gap-4 p-6">
       <SideNavigation />
       <div className="flex flex-col items-center">
-        <h1 className="text-gray font-bebas text-sm lg:text-base">{project.website}</h1>
-        <span className="text-white text-xl lg:text-3xl font-bebas text-center">
+        <p className="text-gray font-bebas text-sm lg:text-base">
+          {project.website}
+        </p>
+        <p className="text-white text-xl lg:text-3xl font-bebas text-center">
           {project.title} - {project.description}
-        </span>
-        <p className="text-gray text-xs lg:text-sm text-center">{project.about}</p>
-      </div>
-      <div className="flex gap-4">
-        <p className="flex text-white text-[8px] sm:text-[10px]">
-          Role:
-          <span className="text-gray text-[8px] sm:text-[10px] ml-1">{project.role}</span>
         </p>
-        <p className="flex text-white text-[8px] sm:text-[10px]">
-          Organization:
-          <span className="flex text-gray text-[8px] sm:text-[10px] ml-1">{project.agency}</span>
-        </p>
-        <p className="flex text-white text-[8px] sm:text-[10px]">
-          Year:
-          <span className="text-gray text-[8px] sm:text-[10px] ml-1">{project.year}</span>
+        <p className="text-gray text-xs lg:text-sm text-center">
+          {project.about}
         </p>
       </div>
+      <div className="flex gap-4 text-white text-[8px] sm:text-[10px]">
+        {[
+          { label: "Role", value: project.role },
+          { label: "Organization", value: project.agency },
+          { label: "Year", value: project.year },
+        ].map((item, index) => (
+          <p key={index} className="flex">
+            {item.label}:<span className="text-gray ml-1">{item.value}</span>
+          </p>
+        ))}
+      </div>
+
       {project.link && (
         <div key={project.id}>
           <Link
@@ -76,18 +78,26 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         ))}
       </div>
       <div className="flex gap-4 mt-4">
-        <TransitionLink href="/">
-          <span className="text-blue text-[10px] bg-black-200 p-2 flex items-center hover:text-white gap-1">
-            <IoIosArrowBack />
-            Home
-          </span>
-        </TransitionLink>
-        <TransitionLink href="/all-projects">
-          <span className="text-blue text-[10px] bg-black-200 p-2 flex items-center hover:text-white gap-1">
-            All Projects
-            <IoIosArrowForward />
-          </span>
-        </TransitionLink>
+        {[
+          {
+            label: "Home",
+            href: "/",
+            icon: <IoIosArrowBack />,
+          },
+          {
+            label: "All Projects",
+            href: "/all-projects",
+            icon: <IoIosArrowForward />,
+          },
+        ].map((item, index) => (
+          <TransitionLink key={index} href={item.href}>
+            <span className="text-blue text-[10px] bg-black-200 p-2 flex items-center hover:text-white gap-1">
+              {item.label === "Home" && item.icon}
+              {item.label}
+              {item.label === "All Projects" && item.icon}
+            </span>
+          </TransitionLink>
+        ))}
       </div>
     </div>
   );
