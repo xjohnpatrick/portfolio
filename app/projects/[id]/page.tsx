@@ -63,11 +63,11 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         </div>
       )}
 
-      <div className="flex flex-wrap justify-center gap-1 sm:gap-4 w-full">
+      <div className="flex flex-wrap justify-center sm:gap-4 w-full">
         {project.img.map((image, index) => (
           <div
             key={index}
-            className="relative w-full sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-52 sm:h-80 md:h-96 lg:h-[600px] revealLeft"
+            className="relative w-[340px] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-52 sm:h-80 md:h-96 lg:h-[600px] revealLeft"
           >
             <Image
               src={image}
