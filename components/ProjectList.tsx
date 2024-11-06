@@ -12,7 +12,7 @@ export default function ProjectList() {
     setupObserver(components);
   }, []);
   return (
-    <div className="flex flex-col w-full h-[700px] lg:h-[500px] items-center p-6">
+    <div className="flex flex-col w-full h-[500px] items-center p-6">
       <div className="w-[340px] sm:w-[400px] lg:w-[1000px] revealLeft">
         <div className="flex flex-col w-full">
           <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
@@ -28,7 +28,7 @@ export default function ProjectList() {
               {/* FOR LARGE DEVICES */}
               <div
                 key={proj.id}
-                className="hidden sm:block w-full h-[230px] lg:h-[275px] box2"
+                className="hidden lg:block w-full h-[230px] lg:h-[275px] box2"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="box2-inner relative w-full h-full">
@@ -60,7 +60,7 @@ export default function ProjectList() {
               {/* FOR MOBILE DEVICES */}
               <div
                 key={proj.id}
-                className="block sm:hidden w-full h-[150px] lg:h-72 box2"
+                className="block lg:hidden w-full h-[150px] sm:h-[200px] box2"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="relative w-full h-full">

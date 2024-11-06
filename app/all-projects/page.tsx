@@ -5,7 +5,7 @@ import React from "react";
 
 export default function AllProjects() {
   return (
-    <div className="flex flex-col w-full h-screen items-center p-6">
+    <div className="flex flex-col w-full h-[700px] lg:h-[1000px] items-center p-6">
       <div className="w-full md:w-[750px]">
         <div className="flex flex-col w-full">
           <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
@@ -21,7 +21,7 @@ export default function AllProjects() {
               {/* FOR LARGE DEVICES */}
               <div
                 key={proj.id}
-                className="hidden sm:block w-full h-[240px] box"
+                className="hidden lg:block w-full h-[240px] box"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="box-inner relative w-full h-full">
@@ -52,9 +52,9 @@ export default function AllProjects() {
                 </TransitionLink>
               </div>
               {/* FOR MOBILE DEVICES */}
-              <div key={proj.id} className="block sm:hidden w-full h-[240px]">
+              <div key={proj.id} className="block lg:hidden w-full h-[150px] sm:h-[200px]">
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
-                  <div className="relative w-full h-full">
+                  <div className="relative w-full h-full flex justify-center items-center">
                     <Image
                       src={proj.img[0]}
                       alt={proj.alt}
