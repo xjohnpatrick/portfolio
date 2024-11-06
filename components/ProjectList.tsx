@@ -60,7 +60,7 @@ export default function ProjectList() {
               {/* FOR MOBILE DEVICES */}
               <div
                 key={proj.id}
-                className="block sm:hidden w-full h-[240px] lg:h-72 box2"
+                className="block sm:hidden w-full h-[150px] lg:h-72 box2"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="relative w-full h-full">
