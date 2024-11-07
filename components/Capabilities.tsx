@@ -11,7 +11,7 @@ export default function Capabilities() {
   }, []);
   return (
     <div className="flex flex-col w-full h-[1500px] md:h-[1450px] relative">
-      <div className="flex flex-col items-center h-[600px] w-full reveal-right">
+      <div className="flex flex-col items-center h-[600px] w-full reveal-left">
         <div className="flex flex-col absolute top-5 lg:top-14 text-center z-20">
           <span className="text-gray font-bebas">Capabilities</span>
           <span className="text-white text-2xl font-bebas">Things I do</span>
@@ -95,7 +95,7 @@ export default function Capabilities() {
         </div>
       </div>
 
-      <div className="flex flex-col w-full h-[280px] md:h-[200px] py-2 px-4 reveal-left items-center">
+      <div className="flex flex-col w-full h-[280px] md:h-[200px] py-2 px-4 reveal-right items-center">
         <div className="flex flex-col items-center">
           <h1 className="font-bebas text-gray text-base mt-2 leading-3">
             Know how to do
