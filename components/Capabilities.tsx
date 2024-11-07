@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { capabilities, experience, personalInfo, technologies } from "@/data";
+import { capabilities, experience, personalInfo } from "@/data";
 import Image from "next/image";
 import { setupObserver } from "@/app/scroll";
 
