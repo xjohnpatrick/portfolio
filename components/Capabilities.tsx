@@ -67,11 +67,10 @@ export default function Capabilities() {
               ))}
             </div>
           ))}
-
-          <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas reveal-left">
+          <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
             About Me
           </span>
-          <span className="uppercase text-gray-100 text-3xl mb-4 font-bebas reveal-left">
+          <span className="uppercase text-gray-100 text-3xl mb-4 font-bebas">
             Experience
           </span>
           <div className="flex gap-4 reveal-right">
