@@ -15,7 +15,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
   useEffect(() => {
     if (project) {
-      const components = document.querySelectorAll(".revealLeft");
+      const components = document.querySelectorAll(".reveal-left");
       setupObserver(components);
     }
   }, [project]);
@@ -67,7 +67,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         {project.img.map((image, index) => (
           <div
             key={index}
-            className="relative w-[340px] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-52 sm:h-80 md:h-96 lg:h-[600px] revealLeft"
+            className="relative w-[340px] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-52 sm:h-80 md:h-96 lg:h-[600px] reveal-left"
           >
             <Image
               src={image}

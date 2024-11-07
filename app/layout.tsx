@@ -21,9 +21,9 @@ export default function RootLayout({
       <body
         className={`bg-black-100 ${roboto.className} ${chokokutai.variable} ${bebasNeue.variable}`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+          <Navbar />
+          {children}
+          <Footer />
       </body>
     </html>
   );

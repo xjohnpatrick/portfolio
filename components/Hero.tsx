@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import ProjectList from "@/components/ProjectList";
 import { heroText } from "@/data";
 
 export default function Hero() {
@@ -29,7 +28,6 @@ export default function Hero() {
           </span>
         ))}
       </div>
-      <ProjectList />
     </div>
   );
 }

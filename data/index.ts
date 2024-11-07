@@ -1,7 +1,7 @@
 export const socialMedia = [
   {
     id: 0,
-    img: "/git.svg",
+    img: "/github.svg",
     alt: "github icon",
     link: "https://github.com/xjohnpatrick",
     text: "Explore my GitHub!",
@@ -82,7 +82,8 @@ export const projects = [
     role: "Front-End Developer",
     year: "2022-2023",
     agency: "Barangay Comembo",
-    about: "This application simplifies file organization and retrieval, ensuring users can easily access important documents and maintain an efficient workflow.",
+    about:
+      "This application simplifies file organization and retrieval, ensuring users can easily access important documents and maintain an efficient workflow.",
   },
 ];
 
@@ -190,5 +191,44 @@ export const heroText = [
       "Valdesis",
       "Silvenia",
     ],
+  },
+];
+
+export const technologies = [
+  {
+    id: 0,
+    img: "/next.svg",
+    alt: "Next.js Logo",
+    title: "Next.js",
+  },
+  {
+    id: 1,
+    img: "/git.svg",
+    alt: "Git Logo",
+    title: "Git",
+  },
+  {
+    id: 2,
+    img: "/js.svg",
+    alt: "JavaScript Logo",
+    title: "JavaScript",
+  },
+  {
+    id: 3,
+    img: "/ts.svg",
+    alt: "TypeScript Logo",
+    title: "TypeScript",
+  },
+  {
+    id: 4,
+    img: "/tailwind.svg",
+    alt: "Tailwind Logo",
+    title: "Tailwind CSS",
+  },
+  {
+    id: 5,
+    img: "/vs.svg",
+    alt: "Visual Studio Logo",
+    title: "Visual Studio",
   },
 ];

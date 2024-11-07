@@ -33,7 +33,8 @@ export const TransitionLink = ({
     router.push(href);
     await sleep(500);
     window.scrollTo({ top: 0, behavior: "smooth" });
-    body?.classList.remove("page-transition");  
+    body?.classList.remove("page-transition");
+    
   };
   return (
     <Link
