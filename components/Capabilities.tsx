@@ -46,22 +46,23 @@ export default function Capabilities() {
           ))}
         </div>
       </div>
-      <div className="flex w-full h-[650px] absolute bottom-0 p-6 lg:p-16 justify-center clip-trapezoid-right bg-white">
+
+      <div className="flex w-full h-[650px] absolute bottom-0 p-6 lg:p-16 justify-center clip-trapezoid-right bg-white reveal-left">
         <div className="flex flex-col w-full lg:w-[1200px] h-full">
           <div className="flex flex-col w-full py-2">
-            <span className="uppercase leading-3 text-gray text-base font-bebas reveal-left">
+            <span className="uppercase leading-3 text-gray text-base font-bebas">
               Information
             </span>
-            <span className="uppercase text-gray-100 text-3xl font-bebas reveal-left">
+            <span className="uppercase text-gray-100 text-3xl font-bebas">
               About Me
             </span>
           </div>
           {personalInfo.map((info) => (
-            <div key={info.id} className="reveal-right">
+            <div key={info.id}>
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-gray-100 mb-4 text-xs md:text-sm lg:text-base reveal-right"
+                  className="text-gray-100 mb-4 text-xs md:text-sm lg:text-base"
                 >
                   {paragraph}
                 </p>
@@ -69,10 +70,10 @@ export default function Capabilities() {
             </div>
           ))}
           <div className="flex flex-col w-full py-2">
-            <span className="uppercase leading-3 text-gray text-base font-bebas reveal-left">
+            <span className="uppercase leading-3 text-gray text-base font-bebas">
               About Me
             </span>
-            <span className="uppercase text-gray-100 text-3xl font-bebas reveal-left">
+            <span className="uppercase text-gray-100 text-3xl font-bebas">
               Experience
             </span>
           </div>
@@ -80,7 +81,7 @@ export default function Capabilities() {
             {experience.map((exp) => (
               <div
                 key={exp.id}
-                className="flex items-center w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-auto lg:h-auto reveal-right"
+                className="flex items-center w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-auto lg:h-auto"
               >
                 <Image
                   src={exp.imgLogo}
