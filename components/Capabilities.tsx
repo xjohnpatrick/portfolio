@@ -10,7 +10,7 @@ export default function Capabilities() {
     setupObserver(components);
   }, []);
   return (
-    <div className="flex flex-col w-full h-[1420px] md:h-[1450px] relative">
+    <div className="flex flex-col w-full h-[1500px] md:h-[1450px] relative">
       <div className="flex flex-col items-center h-[600px] w-full reveal-right">
         <div className="flex flex-col absolute top-5 lg:top-14 text-center z-20">
           <span className="text-gray font-bebas">Capabilities</span>
@@ -46,7 +46,7 @@ export default function Capabilities() {
           ))}
         </div>
       </div>
-      <div className="flex w-full h-[560px] md:h-[650px] absolute bottom-0 p-6 lg:p-16 justify-center clip-trapezoid-right bg-white">
+      <div className="flex w-full h-[650px] absolute bottom-0 p-6 lg:p-16 justify-center clip-trapezoid-right bg-white">
         <div className="flex flex-col w-full lg:w-[1200px] h-full">
           <div className="flex flex-col w-full py-2">
             <span className="uppercase leading-3 text-gray text-base font-bebas reveal-left">
