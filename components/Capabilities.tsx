@@ -73,7 +73,7 @@ export default function Capabilities() {
           <span className="uppercase text-gray-100 text-3xl mb-4 font-bebas">
             Experience
           </span>
-          <div className="flex gap-4 reveal-right">
+          <div className="flex gap-4">
             {experience.map((exp) => (
               <div
                 key={exp.id}
