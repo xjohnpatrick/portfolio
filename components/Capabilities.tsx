@@ -97,7 +97,7 @@ export default function Capabilities() {
           <h1 className="font-bebas text-gray text-base mt-2 leading-3">Know how to do</h1>
           <h1 className="font-bebas text-white text-2xl mt-2">Skills</h1>
         </div>
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-10 lg:gap-20">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-8 lg:gap-20">
           {technologies.map((tech) => (
             <div
               key={tech.id}
