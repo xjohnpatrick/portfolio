@@ -36,7 +36,7 @@ export default function ProjectList() {
                       src={proj.img[0]}
                       alt={proj.alt}
                       fill
-                      className="object-contain box2-front"
+                      className="object-cover box2-front"
                     />
 
                     <div
