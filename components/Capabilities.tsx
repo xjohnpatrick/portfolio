@@ -56,11 +56,11 @@ export default function Capabilities() {
             About Me
           </span>
           {personalInfo.map((info) => (
-            <div key={info.id} className="reveal-right">
+            <div key={info.id}>
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-gray-100 mb-4 text-xs lg:text-base reveal-right"
+                  className="text-gray-100 mb-4 text-xs lg:text-base"
                 >
                   {paragraph}
                 </p>
