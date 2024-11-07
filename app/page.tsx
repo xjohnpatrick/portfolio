@@ -4,7 +4,7 @@ import ProjectList from "@/components/ProjectList";
 
 export default function Home() {
   return (
-    <main className="flex flex-col w-full bg-black-100 relative">
+    <main className="flex flex-col w-full bg-black-100 relative overflow-clip">
       <Hero />
       <Capabilities />
       <ProjectList />
