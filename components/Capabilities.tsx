@@ -91,27 +91,7 @@ export default function Capabilities() {
           </div>
         </div>
       </div>
-      {/* */}
-      <div className="flex flex-col w-full h-[280px] md:h-[200px] py-2 px-4 reveal-left items-center">
-        <div className="flex flex-col items-center">
-          <h1 className="font-bebas text-gray text-base mt-2 leading-3">Know how to do</h1>
-          <h1 className="font-bebas text-white text-2xl mt-2">Skills</h1>
-        </div>
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-8 lg:gap-20">
-          {technologies.map((tech) => (
-            <div
-              key={tech.id}
-              className="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-auto lg:h-auto"
-            >
-              <Image src={tech.img} alt={tech.alt} width={80} height={50} />
-              <div className="absolute -bottom-4 lg:-bottom-8 text-white text-xs lg:text-lg text-nowrap">
-                {tech.title}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* */}
+      
     </div>
   );
 }
