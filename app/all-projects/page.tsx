@@ -52,7 +52,10 @@ export default function AllProjects() {
                 </TransitionLink>
               </div>
               {/* FOR MOBILE DEVICES */}
-              <div key={proj.id} className="block lg:hidden w-full h-[150px] sm:h-[200px]">
+              <div
+                key={proj.id}
+                className="block lg:hidden w-full h-[150px] sm:h-[200px]"
+              >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="relative w-full h-full flex justify-center items-center">
                     <Image

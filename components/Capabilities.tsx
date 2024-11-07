@@ -1,17 +1,17 @@
 "use client";
 import React, { useEffect } from "react";
-import { capabilities, experience, personalInfo, technologies } from "@/data";
+import { capabilities, experience, personalInfo } from "@/data";
 import Image from "next/image";
 import { setupObserver } from "@/app/scroll";
 
 export default function Capabilities() {
   useEffect(() => {
-    const components = document.querySelectorAll(".reveal-left, .reveal-right");
+    const components = document.querySelectorAll(".revealUp, .revealRight");
     setupObserver(components);
   }, []);
   return (
-    <div className="flex flex-col w-full h-[1500px] md:h-[1450px] relative">
-      <div className="flex flex-col items-center h-[600px] w-full reveal-left">
+    <div className="flex flex-col w-full h-[1250px] lg:h-[1170px] relative">
+      <div className="flex flex-col items-center h-[600px] w-full revealRight">
         <div className="flex flex-col absolute top-5 lg:top-14 text-center z-20">
           <span className="text-gray font-bebas">Capabilities</span>
           <span className="text-white text-2xl font-bebas">Things I do</span>
@@ -47,42 +47,36 @@ export default function Capabilities() {
         </div>
       </div>
 
-      <div className="flex w-full h-[650px] absolute bottom-0 p-6 lg:p-16 justify-center clip-trapezoid-right bg-white reveal-left">
-        <div className="flex flex-col w-full lg:w-[1200px] h-full">
-          <div className="flex flex-col w-full py-2">
-            <span className="uppercase leading-3 text-gray text-base font-bebas">
-              Information
-            </span>
-            <span className="uppercase text-gray-100 text-3xl font-bebas">
-              About Me
-            </span>
-          </div>
+      <div className="flex w-full h-[700px] lg:h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white revealUp">
+        <div className="flex flex-col w-[1200px] mx-6">
+          <span className="uppercase tracking-wider leading-3 text-gray text-base font-bebas">
+            Information
+          </span>
+          <span className="uppercase text-gray-100 text-3xl font-bebas">
+            About Me
+          </span>
           {personalInfo.map((info) => (
             <div key={info.id}>
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-gray-100 mb-4 text-xs md:text-sm lg:text-base"
+                  className="text-gray-100 mb-4 text-xs lg:text-base"
                 >
                   {paragraph}
                 </p>
               ))}
             </div>
           ))}
-          <div className="flex flex-col w-full py-2">
-            <span className="uppercase leading-3 text-gray text-base font-bebas">
-              About Me
-            </span>
-            <span className="uppercase text-gray-100 text-3xl font-bebas">
-              Experience
-            </span>
-          </div>
-          <div className="flex gap-4 w-full h-full py-2">
+
+          <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
+            About Me
+          </span>
+          <span className="uppercase text-gray-100 text-3xl mb-4 font-bebas">
+            Experience
+          </span>
+          <div className="flex gap-4 items-center">
             {experience.map((exp) => (
-              <div
-                key={exp.id}
-                className="flex items-center w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-auto lg:h-auto"
-              >
+              <div key={exp.id}>
                 <Image
                   src={exp.imgLogo}
                   alt={exp.altLogo}
@@ -94,29 +88,6 @@ export default function Capabilities() {
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col w-full h-[280px] md:h-[200px] py-2 px-4 reveal-right items-center">
-        <div className="flex flex-col items-center">
-          <h1 className="font-bebas text-gray text-base mt-2 leading-3">
-            Know how to do
-          </h1>
-          <h1 className="font-bebas text-white text-2xl mt-2">Skills</h1>
-        </div>
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-8 lg:gap-20">
-          {technologies.map((tech) => (
-            <div
-              key={tech.id}
-              className="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-18 md:h-18 lg:w-auto lg:h-auto"
-            >
-              <Image src={tech.img} alt={tech.alt} width={80} height={50} />
-              <div className="absolute -bottom-4 lg:-bottom-8 text-white text-xs lg:text-lg text-nowrap">
-                {tech.title}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-      {/* */}
     </div>
   );
 }

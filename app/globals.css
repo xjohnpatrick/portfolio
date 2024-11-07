@@ -33,11 +33,9 @@ body {
 .page-transition {
   opacity: 0;
   background: #ffffff;
-  transform: translateX(20px);
+  transform: translateY(20px);
   filter: blur(8px);
 }
-
-/* Scroll Animation */
 
 @keyframes revealAnimationRight {
   from {
@@ -83,39 +81,39 @@ body {
   }
 }
 
-.reveal-right.show {
+.revealRight.show {
   opacity: 1;
   animation: revealAnimationRight 0.6s ease-in-out forwards;
 }
 
-.reveal-right {
+.revealRight {
   opacity: 0;
 }
 
-.reveal-left.show {
+.revealLeft.show {
   opacity: 1;
   animation: revealAnimationLeft 0.6s ease-in-out forwards;
 }
 
-.reveal-left {
+.revealLeft {
   opacity: 0;
 }
 
-.reveal-up.show {
+.revealUp.show {
   opacity: 1;
   animation: revealAnimationUp 0.6s ease-in-out forwards;
 }
 
-.reveal-up {
+.revealUp {
   opacity: 0;
 }
 
-.reveal-down.show {
+.revealDown.show {
   opacity: 1;
   animation: revealAnimationDown 0.6s ease-in-out forwards;
 }
 
-.reveal-down {
+.revealDown {
   opacity: 0;
 }
 

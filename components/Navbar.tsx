@@ -44,7 +44,8 @@ export default function Navbar() {
                 title={title}
                 isActive={
                   href === "/all-projects"
-                    ? pathname.startsWith("/projects/") || pathname === "/all-projects"
+                    ? pathname.startsWith("/projects/") ||
+                      pathname === "/all-projects"
                     : pathname === href
                 }
               />

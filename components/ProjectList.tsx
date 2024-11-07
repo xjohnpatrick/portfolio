@@ -8,12 +8,12 @@ import { setupObserver } from "@/app/scroll";
 
 export default function ProjectList() {
   useEffect(() => {
-    const components = document.querySelectorAll(".reveal-up");
+    const components = document.querySelectorAll(".revealLeft");
     setupObserver(components);
   }, []);
   return (
     <div className="flex flex-col w-full h-[500px] items-center p-6">
-      <div className="w-[300px] sm:w-[400px] lg:w-[1000px] reveal-up">
+      <div className="w-[300px] sm:w-[400px] lg:w-[1000px] revealLeft">
         <div className="flex flex-col w-full">
           <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
             In Progress
