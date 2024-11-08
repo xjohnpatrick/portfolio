@@ -16,7 +16,7 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex flex-col w-full h-[800px] sm:h-[900px] lg:h-[1000px] lg:justify-center gap-4">
+    <div className="flex flex-col w-full h-[800px] sm:h-[900px] lg:h-[1000px] lg:justify-center gap-4 mt-16">
       <div className="flex w-full justify-center items-center h-64 lg:h-auto">
         {heroText[0].text.map((textLine, index) => (
           <span

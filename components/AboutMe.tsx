@@ -4,7 +4,7 @@ import React from "react";
 
 export default function AboutMe() {
   return (
-    <div className="flex w-full h-[1000px] justify-center p-4">
+    <div className="flex w-full h-[1000px] justify-center p-4 mt-16">
       <div className="flex flex-col w-[1200px]">
         <span className="font-bebas tracking-wider leading-3 text-gray text-[16px]">
           Information

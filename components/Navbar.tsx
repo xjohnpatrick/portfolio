@@ -20,7 +20,7 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <header className="flex w-full sticky top-0 z-50">
+    <header className="flex w-full fixed top-0 z-50">
       <div
         className={`flex w-full transition-all duration-300 ${
           scrolled ? "bg-black h-10" : "bg-transparent h-16"

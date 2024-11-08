@@ -5,7 +5,7 @@ import React from "react";
 
 export default function AllProjects() {
   return (
-    <div className="flex flex-col w-full h-[700px] lg:h-[1000px] items-center p-6">
+    <div className="flex flex-col w-full h-[700px] lg:h-[1000px] items-center px-6 pt-14">
       <div className="w-full md:w-[750px]">
         <div className="flex flex-col w-full">
           <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
