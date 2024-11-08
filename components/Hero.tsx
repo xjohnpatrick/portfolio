@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { heroText } from "@/app/data";
+import { heroText } from "@/data";
 import ProjectList from "@/components/ProjectList";
 
 export default function Hero() {

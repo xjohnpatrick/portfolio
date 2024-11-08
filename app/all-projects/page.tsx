@@ -1,4 +1,4 @@
-import { projects } from "@/app/data";
+import { projects } from "@/data";
 import { TransitionLink } from "@/utils/TransitionLink";
 import Image from "next/image";
 import React from "react";

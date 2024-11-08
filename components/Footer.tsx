@@ -1,4 +1,4 @@
-import { socialMedia } from "@/app/data";
+import { socialMedia } from "@/data";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

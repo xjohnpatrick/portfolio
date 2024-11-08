@@ -1,4 +1,4 @@
-import { experience, personalInfo } from "@/app/data";
+import { experience, personalInfo } from "@/data";
 import Image from "next/image";
 import React from "react";
 
