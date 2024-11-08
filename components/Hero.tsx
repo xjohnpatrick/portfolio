@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { heroText } from "@/data";
+import ProjectList from "@/components/ProjectList";
 
 export default function Hero() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -15,7 +16,7 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="flex flex-col w-full h-[800px] sm:h-[900px] lg:h-[1000px] lg:justify-center gap-4" id="hero">
+    <div className="flex flex-col w-full h-[800px] md:h-[1000px] justify-center gap-4 mt-16" id="hero">
       <div className="flex flex-col w-full justify-center items-center h-64 lg:h-auto px-2">
         {heroText[0].text.map((textLine, index) => (
           <span
@@ -28,6 +29,7 @@ export default function Hero() {
           </span>
         ))}
       </div>
+      <ProjectList />
     </div>
   );
 }

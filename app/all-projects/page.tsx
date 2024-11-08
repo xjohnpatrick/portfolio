@@ -15,7 +15,7 @@ export default function AllProjects() {
             Projects
           </span>
         </div>
-        <div className="flex flex-col w-full gap-10">
+        <div className="flex flex-col w-full gap-4">
           {projects.map((proj) => (
             <>
               {/* FOR LARGE DEVICES */}

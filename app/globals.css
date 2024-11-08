@@ -7,7 +7,8 @@
     @apply !scroll-smooth;
     box-sizing: border-box;
   }
-  html, body {
+  html,
+  body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -126,11 +127,19 @@ body {
 /*Box CSS*/
 
 @media (hover: none) {
-  .box, .box2, .boxNav, .boxNav2, .boxNav3 {
+  .box,
+  .box2,
+  .boxNav,
+  .boxNav2,
+  .boxNav3 {
     perspective: none; /* Disable perspective */
   }
 
-  .box-inner, .box2-inner, .boxNav-inner, .boxNav2-inner, .boxNav3-inner {
+  .box-inner,
+  .box2-inner,
+  .boxNav-inner,
+  .boxNav2-inner,
+  .boxNav3-inner {
     transition: none; /* Disable transition */
     transform-style: flat; /* Change transform-style */
   }
@@ -145,10 +154,18 @@ body {
   }
 }
 
-.box, .box2, .boxNav, .boxNav2, .boxNav3 {
+.box,
+.box2,
+.boxNav,
+.boxNav2,
+.boxNav3 {
   perspective: 1000px;
 }
-.box-inner, .box2-inner, .boxNav-inner, .boxNav2-inner, .boxNav3-inner {
+.box-inner,
+.box2-inner,
+.boxNav-inner,
+.boxNav2-inner,
+.boxNav3-inner {
   transition: transform 0.3s;
   transform-style: preserve-3d;
 }
@@ -165,6 +182,12 @@ body {
 .box-back {
   transform: rotateX(-90deg) translateZ(100px);
   backface-visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.box:hover .box-back {
+  opacity: 1;
 }
 
 @media (min-width: 1025px) {
@@ -175,6 +198,12 @@ body {
   .box2-back {
     transform: rotateY(-90deg) translateZ(249px);
     backface-visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
+  .box2:hover .box2-back {
+    opacity: 1;
   }
 }
 @media (min-width: 600px) and (max-width: 1024px) {
