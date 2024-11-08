@@ -55,7 +55,7 @@ export const projects = [
       todoListApp7,
       todoListApp8,
       todoListApp9,
-      todoListApp1,
+      todoListApp10,
     ],
     alt: "TodoList Image",
     link: "",
