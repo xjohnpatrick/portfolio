@@ -1,6 +1,6 @@
 import React from "react";
 import { Metadata } from "next";
-import { projects } from "@/data";
+import { projects } from "@/app/data";
 
 export default function ProjectLayout({
   children,

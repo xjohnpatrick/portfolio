@@ -1,3 +1,15 @@
+import todoListApp from "@/app/images/todolist/todoListApp.png"
+import todoListApp1 from "@/app/images/todolist/todoListApp1.png";
+import todoListApp2 from "@/app/images/todolist/todoListApp2.png";
+import todoListApp3 from "@/app/images/todolist/todoListApp3.png";
+import todoListApp4 from "@/app/images/todolist/todoListApp4.png";
+import todoListApp5 from "@/app/images/todolist/todoListApp5.png";
+import todoListApp6 from "@/app/images/todolist/todoListApp6.png";
+import todoListApp7 from "@/app/images/todolist/todoListApp7.png";
+import todoListApp8 from "@/app/images/todolist/todoListApp8.png";
+import todoListApp9 from "@/app/images/todolist/todoListApp9.png";
+import todoListApp10 from "@/app/images/todolist/todoListApp10.png";
+
 export const socialMedia = [
   {
     id: 0,
@@ -33,17 +45,17 @@ export const projects = [
   {
     id: 0,
     img: [
-      "/todoListApp.png",
-      "/todoListApp1.png",
-      "/todoListApp2.png",
-      "/todoListApp3.png",
-      "/todoListApp4.png",
-      "/todoListApp5.png",
-      "/todoListApp6.png",
-      "/todoListApp7.png",
-      "/todoListApp8.png",
-      "/todoListApp9.png",
-      "/todoListApp10.png",
+      todoListApp,
+      todoListApp1,
+      todoListApp2,
+      todoListApp3,
+      todoListApp4,
+      todoListApp5,
+      todoListApp6,
+      todoListApp7,
+      todoListApp8,
+      todoListApp9,
+      todoListApp1,
     ],
     alt: "TodoList Image",
     link: "",
@@ -184,7 +196,7 @@ export const heroText = [
       "a passionate",
       "Front-End Developer",
       "Bringing Ideas",
-      "To Life"
+      "To Life",
     ],
   },
 ];

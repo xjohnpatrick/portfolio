@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { projects } from "@/data";
+import { projects } from "@/app/data";
 import Image from "next/image";
 import { TransitionLink } from "@/utils/TransitionLink";
 import { IoIosArrowBack } from "react-icons/io";
