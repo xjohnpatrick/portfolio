@@ -72,7 +72,7 @@ export default function AboutMe() {
         </span>
         <div className="flex gap-4 items-center">
           {experience.map((exp) => (
-            <div key={exp.id}>
+            <div key={exp.id} className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-auto flex items-center">
               <Image
                 src={exp.imgLogo}
                 alt={exp.altLogo}

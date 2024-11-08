@@ -23,7 +23,7 @@ export default function ProjectList() {
           </span>
         </div>
 
-        <div className="grid xl:grid-cols-2">
+        <div className="grid xl:grid-cols-2 gap-4">
           {projects.map((proj) => (
             <React.Fragment key={proj.id}>
               {/* FOR LARGE DEVICES */}

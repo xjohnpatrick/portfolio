@@ -60,7 +60,7 @@ export default function Capabilities() {
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-gray-100 mb-4 text-xs lg:text-base revealRight"
+                  className="text-gray-100 mb-4 text-xs sm:text-sm lg:text-base revealRight"
                 >
                   {paragraph}
                 </p>
@@ -76,7 +76,10 @@ export default function Capabilities() {
           </span>
           <div className="flex gap-4 items-center">
             {experience.map((exp) => (
-              <div key={exp.id} className="revealRight">
+              <div
+                key={exp.id}
+                className="w-14 h-14 sm:w-20 sm:h-20 md:w-24 md:h-24 lg:w-auto flex items-center revealRight"
+              >
                 <Image
                   src={exp.imgLogo}
                   alt={exp.altLogo}
