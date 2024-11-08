@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { heroText } from "@/data";
-import { IoIosArrowForward } from "react-icons/io";
 
 export default function Hero() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
