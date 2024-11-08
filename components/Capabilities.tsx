@@ -10,7 +10,7 @@ export default function Capabilities() {
     setupObserver(components);
   }, []);
   return (
-    <div className="flex flex-col w-full h-[1550px] md:h-[1510px] lg:h-[1400px] relative">
+    <div className="flex flex-col w-full h-[1560px] md:h-[1510px] lg:h-[1400px] relative">
       <div className="flex flex-col items-center h-[600px] w-full revealRight">
         <div className="flex flex-col absolute top-5 lg:top-14 text-center z-20">
           <span className="text-gray font-bebas">Capabilities</span>
@@ -95,7 +95,7 @@ export default function Capabilities() {
           </h1>
           <h1 className="font-bebas text-white text-2xl mt-2">Skills</h1>
         </div>
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-8 lg:gap-20">
+        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-8 gap-8 lg:gap-20">
           {technologies.map((tech) => (
             <div
               key={tech.id}

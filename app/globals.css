@@ -169,11 +169,11 @@ body {
 
 @media (min-width: 1025px) {
   .box2-front {
-    transform: translateZ(240px);
+    transform: translateZ(249px);
   }
 
   .box2-back {
-    transform: rotateY(-90deg) translateZ(240px);
+    transform: rotateY(-90deg) translateZ(249px);
     backface-visibility: hidden;
   }
 }

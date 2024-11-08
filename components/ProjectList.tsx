@@ -12,8 +12,8 @@ export default function ProjectList() {
     setupObserver(components);
   }, []);
   return (
-    <div className="flex flex-col w-full h-[500px] items-center p-6">
-      <div className="w-[300px] sm:w-[400px] lg:w-[1000px] revealLeft">
+    <div className="flex w-full h-[500px] lg:h-[700px] justify-center mt-4">
+      <div className="flex flex-col w-[320px] sm:w-[400px] lg:w-[500px] xl:w-[1016px] h-full">
         <div className="flex flex-col w-full">
           <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
             In Progress
@@ -22,13 +22,14 @@ export default function ProjectList() {
             Projects
           </span>
         </div>
-        <div className="flex flex-col lg:flex-row w-full gap-10">
+
+        <div className="grid xl:grid-cols-2 gap-4">
           {projects.map((proj) => (
             <>
               {/* FOR LARGE DEVICES */}
               <div
                 key={proj.id}
-                className="hidden lg:block w-full h-[230px] lg:h-[275px] box2"
+                className="hidden lg:block w-[500px] h-[230px] lg:h-[275px] box2"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="box2-inner relative w-full h-full">
@@ -40,7 +41,7 @@ export default function ProjectList() {
                     />
 
                     <div
-                      className="box2-back w-full h-full flex flex-col items-center justify-center bg-black"
+                      className="box2-back w-full h-full flex flex-col items-center justify-center"
                       style={{
                         backgroundImage: "url('/bg_box2.jpg')",
                         backgroundSize: "contain",
@@ -60,7 +61,7 @@ export default function ProjectList() {
               {/* FOR MOBILE DEVICES */}
               <div
                 key={proj.id}
-                className="block lg:hidden w-full h-[150px] sm:h-[200px] box2"
+                className="block lg:hidden w-full h-[150px] sm:h-[200px]"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
                   <div className="relative w-full h-full">
@@ -68,7 +69,7 @@ export default function ProjectList() {
                       src={proj.img[0]}
                       alt={proj.alt}
                       fill
-                      className="object-contain"
+                      className="object-cover"
                     />
                   </div>
                 </TransitionLink>
@@ -76,6 +77,7 @@ export default function ProjectList() {
             </>
           ))}
         </div>
+
       </div>
     </div>
   );

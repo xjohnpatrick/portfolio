@@ -15,7 +15,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
   useEffect(() => {
     if (project) {
-      const components = document.querySelectorAll(".reveal-left");
+      const components = document.querySelectorAll(".revealLeft");
       setupObserver(components);
     }
   }, [project]);
@@ -25,7 +25,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="w-full flex flex-col items-center gap-4 p-6">
+    <div className="w-full flex flex-col items-center gap-4 p-6 mt-16">
       <SideNavigation />
       <div className="flex flex-col items-center">
         <p className="text-gray font-bebas text-sm lg:text-base">
@@ -67,7 +67,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         {project.img.map((image, index) => (
           <div
             key={index}
-            className="relative w-[340px] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-52 sm:h-80 md:h-96 lg:h-[600px] reveal-left"
+            className="relative w-[340px] sm:w-[600px] md:w-[800px] lg:w-[1000px] xl:w-[1200px] h-52 sm:h-80 md:h-96 lg:h-[600px] revealLeft"
           >
             <Image
               src={image}
