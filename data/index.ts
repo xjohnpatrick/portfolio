@@ -183,13 +183,10 @@ export const heroText = [
   {
     text: [
       "John Patrick",
-      "I am a",
-      "Developer",
-      "Gamer",
-      "Melophile",
-      "Some know me as",
-      "Valdesis",
-      "Silvenia",
+      "a passionate",
+      "Front-End Developer",
+      "Bringing Ideas",
+      "To Life"
     ],
   },
 ];

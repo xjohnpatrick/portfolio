@@ -49,18 +49,18 @@ export default function Capabilities() {
 
       <div className="flex w-full h-[700px] lg:h-[600px] justify-center items-center clip-trapezoid-right absolute bottom-0 bg-white revealUp">
         <div className="flex flex-col w-[1200px] mx-6">
-          <span className="uppercase tracking-wider leading-3 text-gray text-base font-bebas">
+          <span className="uppercase tracking-wider leading-3 text-gray text-base font-bebas revealLeft">
             Information
           </span>
-          <span className="uppercase text-gray-100 text-3xl font-bebas">
+          <span className="uppercase text-gray-100 text-3xl font-bebas revealLeft">
             About Me
           </span>
           {personalInfo.map((info) => (
-            <div key={info.id}>
+            <div key={info.id} className="revealRight">
               {info.content.map((paragraph, index) => (
                 <p
                   key={index}
-                  className="text-gray-100 mb-4 text-xs lg:text-base"
+                  className="text-gray-100 mb-4 text-xs lg:text-base revealRight"
                 >
                   {paragraph}
                 </p>
@@ -68,15 +68,15 @@ export default function Capabilities() {
             </div>
           ))}
 
-          <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
+          <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas revealLeft">
             About Me
           </span>
-          <span className="uppercase text-gray-100 text-3xl mb-4 font-bebas">
+          <span className="uppercase text-gray-100 text-3xl mb-4 font-bebas revealLeft">
             Experience
           </span>
           <div className="flex gap-4 items-center">
             {experience.map((exp) => (
-              <div key={exp.id}>
+              <div key={exp.id} className="revealRight">
                 <Image
                   src={exp.imgLogo}
                   alt={exp.altLogo}
