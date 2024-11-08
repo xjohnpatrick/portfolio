@@ -1,28 +1,3 @@
-import todoListApp from "@/app/images/todolist/todoListApp.png"
-import todoListApp1 from "@/app/images/todolist/todoListApp1.png";
-import todoListApp2 from "@/app/images/todolist/todoListApp2.png";
-import todoListApp3 from "@/app/images/todolist/todoListApp3.png";
-import todoListApp4 from "@/app/images/todolist/todoListApp4.png";
-import todoListApp5 from "@/app/images/todolist/todoListApp5.png";
-import todoListApp6 from "@/app/images/todolist/todoListApp6.png";
-import todoListApp7 from "@/app/images/todolist/todoListApp7.png";
-import todoListApp8 from "@/app/images/todolist/todoListApp8.png";
-import todoListApp9 from "@/app/images/todolist/todoListApp9.png";
-import todoListApp10 from "@/app/images/todolist/todoListApp10.png";
-
-import cmemboApp from "@/app/images/cmembo/cmemboApp.png"
-import cmemboApp1 from "@/app/images/cmembo/cmemboApp1.png";
-import cmemboApp2 from "@/app/images/cmembo/cmemboApp2.png";
-import cmemboApp3 from "@/app/images/cmembo/cmemboApp3.png";
-import cmemboApp4 from "@/app/images/cmembo/cmemboApp4.png";
-import cmemboApp5 from "@/app/images/cmembo/cmemboApp5.png";
-import cmemboApp6 from "@/app/images/cmembo/cmemboApp6.png";
-import cmemboApp7 from "@/app/images/cmembo/cmemboApp7.png";
-import cmemboApp8 from "@/app/images/cmembo/cmemboApp8.png";
-import cmemboApp9 from "@/app/images/cmembo/cmemboApp9.png";
-import cmemboApp10 from "@/app/images/cmembo/cmemboApp10.png";
-import cmemboApp11 from "@/app/images/cmembo/cmemboApp11.png";
-
 export const socialMedia = [
   {
     id: 0,
@@ -57,19 +32,10 @@ export const socialMedia = [
 export const projects = [
   {
     id: 0,
-    img: [
-      todoListApp,
-      todoListApp1,
-      todoListApp2,
-      todoListApp3,
-      todoListApp4,
-      todoListApp5,
-      todoListApp6,
-      todoListApp7,
-      todoListApp8,
-      todoListApp9,
-      todoListApp10,
-    ],
+    img: Array.from(
+      { length: 11 },
+      (_, i) => `/todolist/todoListApp${i}.png`
+    ),
     alt: "TodoList Image",
     link: "",
     description: "Task Management System",
@@ -83,20 +49,10 @@ export const projects = [
   },
   {
     id: 1,
-    img: [
-      cmemboApp,
-      cmemboApp1,
-      cmemboApp2,
-      cmemboApp3,
-      cmemboApp4,
-      cmemboApp5,
-      cmemboApp6,
-      cmemboApp7,
-      cmemboApp8,
-      cmemboApp9,
-      cmemboApp10,
-      cmemboApp11,
-    ],
+    img: Array.from(
+      { length: 12 },
+      (_, i) => `/cmembo/cmemboApp${i}.png`
+    ),
     alt: "Barangay Comembo Image",
     link: "https://queueby.vercel.app",
     description: "Document Management System",

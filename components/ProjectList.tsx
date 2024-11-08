@@ -25,10 +25,10 @@ export default function ProjectList() {
 
         <div className="grid xl:grid-cols-2">
           {projects.map((proj) => (
-            <>
+            <React.Fragment key={proj.id}>
               {/* FOR LARGE DEVICES */}
               <div
-                key={proj.id}
+                key={`${proj.id}-desktop`}
                 className="hidden lg:block w-[500px] h-[230px] lg:h-[275px] box2"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
@@ -38,8 +38,8 @@ export default function ProjectList() {
                       alt={proj.alt}
                       fill
                       className="object-cover box2-front"
+                      sizes="(min-width: 1024px) 500px, 100vw"
                     />
-
                     <div
                       className="box2-back w-full h-full flex flex-col items-center justify-center"
                       style={{
@@ -58,9 +58,10 @@ export default function ProjectList() {
                   </div>
                 </TransitionLink>
               </div>
+
               {/* FOR MOBILE DEVICES */}
               <div
-                key={proj.id}
+                key={`${proj.id}-mobile`}
                 className="block lg:hidden w-full h-[150px] sm:h-[200px]"
               >
                 <TransitionLink href={`/projects/${proj.id}`} passHref>
@@ -70,14 +71,14 @@ export default function ProjectList() {
                       alt={proj.alt}
                       fill
                       className="object-cover"
+                      sizes="100vw"
                     />
                   </div>
                 </TransitionLink>
               </div>
-            </>
+            </React.Fragment>
           ))}
         </div>
-
       </div>
     </div>
   );
