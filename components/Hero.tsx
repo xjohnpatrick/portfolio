@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { heroText } from "@/data";
 import ProjectList from "@/components/ProjectList";
-import myImage from "@/public/heroMyImg.png";
-import Image from "next/image";
 import { setupObserver } from "@/app/scroll";
 
 export default function Hero() {
@@ -68,7 +66,7 @@ export default function Hero() {
             <p className="text-white text-center text-sm md:text-base lg:text-lg sm:w-[500px]">
               As a Front-End Developer, I bring ideas to life with clean,
               efficient code. I create seamless, interactive experiences that
-              engage users. Let's build something amazing together, one pixel at
+              engage users. Let&apos;s build something amazing together, one pixel at
               a time!
             </p>
           </div>
