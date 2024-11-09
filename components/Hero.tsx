@@ -23,54 +23,54 @@ export default function Hero() {
   }, []);
   return (
     <div
-      className="flex flex-col w-full h-[1000px] md:h-[1500px] lg:justify-center gap-4 mt-16 lg:mt-0 relative"
+      className="flex flex-col w-full h-[1000px] sm:h-[1500px] mt-16 p-4"
       id="hero"
     >
-        <div className="flex justify-center w-full">
-          <div
-            className={`font-chokokutai uppercase text-[200px] md:text-[400px] lg:text-[600px] lg:absolute lg:left-[250px] lg:-top-[150px] opacity-20`}
-            style={{
-              backgroundImage: "url(/myImage4.jpg)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundClip: "text",
-              color: "transparent",
-            }}
-          >
+      <div className="flex w-full h-[300px] md:h-[600px] xl:h-[800px]">
+        <div className="flex w-full h-full relative justify-center">
+          <div className="opacity-20 responsive-background font-chokokutai uppercase text-[200px] md:text-[400px] xl:text-[600px] flex xl:absolute xl:-top-56 xl:left-36">
             j
           </div>
-          <div
-            className={`font-chokokutai text-white/10 uppercase text-[200px] md:text-[400px] lg:text-[300px] lg:absolute lg:left-[550px] lg:top-[233px]`}
-          >
-            p
+          <div className="flex xl:absolute xl:top-56 xl:left-[450px]">
+            <span className="font-chokokutai uppercase text-white/10 text-[200px] md:text-[400px] xl:text-[300px]">
+              p
+            </span>
           </div>
-          <div
-            className={`font-chokokutai text-white/10 uppercase text-[200px] md:text-[400px] lg:text-[300px] lg:absolute lg:left-[850px] lg:top-[400px]`}
-          >
-            i
+          <div className="flex xl:absolute xl:top-96 xl:left-[800px]">
+            <span className="font-chokokutai uppercase text-white/10 text-[200px] md:text-[400px] xl:text-[300px]">
+              i
+            </span>
           </div>
         </div>
-
-        <div className="flex w-full relative px-4 h-[200px] lg:h-[400px] justify-center">
-          <div className="flex flex-col items-center lg:absolute lg:right-56 lg:bottom-0 lg:top-auto xl:bottom-auto xl:top-20 xl:w-[700px]">
+        <div className="hidden xl:flex w-full h-full">
+          <div className="flex flex-col h-full w-full justify-center">
             {heroText[0].text.map((textLine, index) => (
               <span
                 key={index}
-                className={`text-7xl lg:text-[100px] text-white font-bebas text-center ${
+                className={`text-[100px] text-white font-bebas text-center ${
                   index === currentTextIndex ? "fly" : "hidden"
                 }`}
               >
                 {textLine}
               </span>
             ))}
-            <p className="text-white text-center text-sm md:text-base lg:text-lg sm:w-[500px]">
-              As a Front-End Developer, I bring ideas to life with clean,
-              efficient code. I create seamless, interactive experiences that
-              engage users. Let&apos;s build something amazing together, one pixel at
-              a time!
-            </p>
           </div>
         </div>
+      </div>
+      <div className="flex xl:hidden w-full h-[400px] justify-center">
+        <div className="flex flex-col h-full justify-center">
+          {heroText[0].text.map((textLine, index) => (
+            <span
+              key={index}
+              className={`text-7xl xl:text-[100px] text-white font-bebas text-center ${
+                index === currentTextIndex ? "fly" : "hidden"
+              }`}
+            >
+              {textLine}
+            </span>
+          ))}
+        </div>
+      </div>
       <ProjectList />
     </div>
   );

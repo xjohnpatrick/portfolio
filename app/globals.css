@@ -285,3 +285,11 @@ body {
 .fly {
   animation: cinematicFlyInOut 6s ease-in-out infinite;
 }
+
+.responsive-background {
+  background-image: url(/myImage4.jpg);
+  background-size: cover;
+  background-position: center;
+  background-clip: text;
+  color: transparent;
+}

@@ -12,7 +12,7 @@ export default function ProjectList() {
     setupObserver(components);
   }, []);
   return (
-    <div className="flex w-full h-[500px] justify-center mt-4 revealLeft">
+    <div className="flex w-full h-auto justify-center mt-4 revealLeft">
       <div className="flex flex-col w-[320px] sm:w-[400px] lg:w-[500px] xl:w-[1016px] h-full">
         <div className="flex flex-col w-full">
           <span className="uppercase leading-3 text-gray text-base mt-4 font-bebas">
