@@ -6,7 +6,7 @@ import { setupObserver } from "@/app/scroll";
 
 export default function Capabilities() {
   useEffect(() => {
-    const components = document.querySelectorAll(".revealUp, .revealRight");
+    const components = document.querySelectorAll(".revealLeft, .revealRight, .revealUp");
     setupObserver(components);
   }, []);
   return (

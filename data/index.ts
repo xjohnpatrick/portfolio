@@ -32,10 +32,7 @@ export const socialMedia = [
 export const projects = [
   {
     id: 0,
-    img: Array.from(
-      { length: 11 },
-      (_, i) => `/todolist/todoListApp${i}.png`
-    ),
+    img: Array.from({ length: 11 }, (_, i) => `/todolist/todoListApp${i}.png`),
     alt: "TodoList Image",
     link: "",
     description: "Task Management System",
@@ -49,10 +46,7 @@ export const projects = [
   },
   {
     id: 1,
-    img: Array.from(
-      { length: 12 },
-      (_, i) => `/cmembo/cmemboApp${i}.png`
-    ),
+    img: Array.from({ length: 12 }, (_, i) => `/cmembo/cmemboApp${i}.png`),
     alt: "Barangay Comembo Image",
     link: "https://queueby.vercel.app",
     description: "Document Management System",
