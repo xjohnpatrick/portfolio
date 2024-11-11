@@ -51,16 +51,21 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
       </div>
 
       {project.link && (
-        <div key={project.id}>
-          <Link
-            target="_blank"
-            rel="noopener noreferrer"
-            href={project.link}
-            className="flex text-xs text-blue bg-black-200 p-2"
-          >
-            View App
-          </Link>
-        </div>
+        <>
+          <div key={project.id}>
+            <Link
+              target="_blank"
+              rel="noopener noreferrer"
+              href={project.link}
+              className="flex text-xs text-blue bg-black-200 p-2"
+            >
+              View App
+            </Link>
+          </div>
+          <span className="flex text-xs text-white">
+            Note: This app is built entirely on the front end
+          </span>
+        </>
       )}
 
       <div className="flex flex-wrap justify-center gap-0 sm:gap-4 w-full">
@@ -84,7 +89,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           {
             label: "Home",
             href: "/",
-            icon: <IoIosArrowBack />, 
+            icon: <IoIosArrowBack />,
           },
           {
             label: "All Projects",
