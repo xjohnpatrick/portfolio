@@ -46,7 +46,7 @@ export const projects = [
   },
   {
     id: 1,
-    img: Array.from({ length: 12 }, (_, i) => `/cmembo/cmemboApp${i}.png`),
+    img: Array.from({ length: 14 }, (_, i) => `/cmembo/cmemboApp${i}.png`),
     alt: "Barangay Comembo Image",
     link: "https://queueby.vercel.app",
     description: "Document Management System",
