@@ -56,7 +56,7 @@ export const projects = [
     year: "2022-2023",
     agency: "Barangay Comembo",
     about:
-      "This application simplifies file organization and retrieval, ensuring users can easily access important documents and maintain an efficient workflow.",
+      "This application designed specifically for the barangay's admin to efficiently manage and organize appointments. Admins can schedule and monitor document processing times, ensuring smoother operations and reducing wait times for residents.",
   },
 ];
 
