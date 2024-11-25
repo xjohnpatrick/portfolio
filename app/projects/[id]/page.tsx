@@ -27,7 +27,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   return (
     <div className="w-full flex flex-col items-center gap-4 p-6 mt-16">
       <SideNavigation />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-[320px] sm:w-full lg:w-[900px]">
         <p className="text-gray font-bebas text-sm lg:text-base">
           {project.website}
         </p>
