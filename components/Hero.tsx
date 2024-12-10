@@ -23,7 +23,7 @@ export default function Hero() {
   }, []);
   return (
     <div
-      className="flex flex-col w-full h-[1000px] sm:h-[1500px] mt-14 p-4"
+      className="flex flex-col w-full h-[1000px] sm:h-[1200px] md:h-[1500px] mt-14 p-4"
       id="hero"
     >
       <div className="flex xl:hidden w-full h-[400px] sm:h-[200px] justify-center">

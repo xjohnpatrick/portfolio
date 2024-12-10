@@ -190,13 +190,28 @@ body {
   opacity: 1;
 }
 
-@media (min-width: 1025px) {
+.box2-front {
+  transform: translateZ(100px);
+}
+
+.box2-back {
+  transform: rotateY(-90deg) translateZ(100px);
+  backface-visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.box2:hover .box2-back {
+  opacity: 1;
+}
+
+/* @media (min-width: 1025px) {
   .box2-front {
-    transform: translateZ(249px);
+    transform: translateZ(100px);
   }
 
   .box2-back {
-    transform: rotateY(-90deg) translateZ(249px);
+    transform: rotateY(-90deg) translateZ(100px);
     backface-visibility: hidden;
     opacity: 0;
     transition: opacity 1s;
@@ -215,7 +230,7 @@ body {
     transform: rotateY(-90deg) translateZ(200px);
     backface-visibility: hidden;
   }
-}
+} */
 
 /* @media (max-width: 599px) {
   .box2-front {

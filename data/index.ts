@@ -32,7 +32,7 @@ export const socialMedia = [
 export const projects = [
   {
     id: 0,
-    img: Array.from({ length: 11 }, (_, i) => `/todolist/todoListApp${i}.png`),
+    img: Array.from({ length: 12 }, (_, i) => `/todolist/todoListApp${i}.png`),
     alt: "TodoList Image",
     link: "https://todolist-tms.vercel.app/",
     description: "Task Management System",
