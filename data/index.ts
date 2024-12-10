@@ -37,7 +37,7 @@ export const projects = [
     link: "https://todolist-tms.vercel.app/",
     description: "Task Management System",
     title: "TodoList",
-    website: "",
+    website: "todolist-tms.vercel.app",
     role: "Front-End Developer",
     year: "2024",
     agency: "Self-Developed",
