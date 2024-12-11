@@ -25,7 +25,7 @@ export default function AboutMe() {
 
               <div className="flex flex-col lg:flex-row w-full gap-1">
                 <div className="flex w-full h-full gap-1">
-                  {[info.img[1], info.img[2]].map((src, index) => (
+                  {[info.img[2]].map((src, index) => (
                     <div key={index} className="w-full h-full relative">
                       <Image
                         src={src}
