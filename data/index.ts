@@ -136,7 +136,7 @@ export const personalInfo = [
     contactNo: "+63 995 978 5885",
     city: "Taguig",
     content: [
-      "Hi, I'm John Patrick Isidoro! As a passionate Front-End/Web Developer, my journey in web applications development began during my college years, where I discovered my love for coding. I've worked extensively with TypeScript, JavaScript, Tailwind CSS, and Next.js, while also exploring Laravel and Express.js.",
+      "Hi, I'm John Patrick Isidoro! As a passionate Front-End/Web Developer, my journey in web applications development began during my college years, where I discovered my love for coding. I've worked extensively with TypeScript, JavaScript, Tailwind CSS, and Next.js, while also exploring Express.js.",
       "My learning has always been driven by curiosity and a desire to grow. While college provided a foundation, it was my collaboration with friends and teammates that truly shaped my skills and development. Teamwork has become essential to my approach, as I believe the best solutions come from diverse perspectives.",
       "Beyond coding, I'm an avid gamer, immersing myself in the worlds of League of Legends, Valorant, and Throne and Liberty. Gaming fuels my creativity and offers a great outlet for strategic thinking and problem-solving. I also find that music enhances my coding sessions, helping me to focus and bring my ideas to life.",
       "I am constantly seeking new opportunities to learn and contribute to impactful projects, with a focus on delivering clean, user-friendly experiences.",
