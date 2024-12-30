@@ -10,7 +10,7 @@ export const socialMedia = [
     id: 1,
     img: "/fb.svg",
     alt: "facebook icon",
-    link: "https://www.facebook.com/JpIsidoro15/",
+    link: "https://www.facebook.com/jp.isid/",
     text: "Check out my Facebook!",
   },
   {
